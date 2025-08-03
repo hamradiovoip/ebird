@@ -1,0 +1,4156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[MOS Birder's Guide Locations]]></name>
+    <description><![CDATA[A map of the Maryland Ornithological Society's Birder's Guide locations. <br><br>https://birdersguidemddc.org/<br><br>Notes:<br><br>Multiple people have contributed to the Birder's Guide over the years, which means the articles and locations can be inconsistent. Some articles cover more than one location. I've tried to separate these intro multiple points on the map. Occasionally, one location, or a similar location, will have duplicate articles.<br><br>Also, some counties are more complete than others in the Birder's Guide. For example, there are many locations along the C&O Canal in Allegany and Frederick counties, but none in Washington County.<br><br>Special Icons:<br>Car = Birding from a public road<br>Boat = Birding from a boat ramp or marina<br>Sailboat = Island inaccessible from land<br>? = Location closed indefinitely<br><br>Regions and counties:<br>These regions are consistent with those in the Birder's Guide, with the exception of DC, which is not included in this map. Counties are color coded.<br><br>Western Maryland:<br>Garrett County<br>Allegany County<br>Washington County<br>Frederick County<br><br>Central Maryland:<br>Montgomery County<br>Howard County<br>Carroll County<br>Baltimore County<br>Baltimore City<br>Harford County<br>Cecil County<br><br>Eastern Shore (Delmarva):<br>Kent County<br>Queen Anne's County<br>Caroline County<br>Talbot County<br>Dorchester County<br>Wicomico County<br>Somerset County<br>Worcester County<br><br>Southern Maryland:<br>Anne Arundel County<br>Prince George's County<br>Charles County<br>Calvert County<br>St. Mary's County]]></description>
+    <Style id="icon-1525-1A237E-normal">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-1A237E-highlight">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-1A237E">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-1A237E-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-1A237E-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-3949AB-normal">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-3949AB-highlight">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-3949AB">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-3949AB-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-3949AB-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-558B2F-normal">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-558B2F-highlight">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-558B2F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-558B2F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-558B2F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-817717-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-817717-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-817717">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-817717-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-817717-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-AFB42B-nodesc-normal">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1525-AFB42B-nodesc-highlight">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1525-AFB42B-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-AFB42B-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-AFB42B-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1525-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1525-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1525-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1525-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1525-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1538-01579B-normal">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1538-01579B-highlight">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1538-01579B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1538-01579B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1538-01579B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1538-3949AB-normal">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1538-3949AB-highlight">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1538-3949AB">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1538-3949AB-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1538-3949AB-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1538-558B2F-normal">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1538-558B2F-highlight">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1538-558B2F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1538-558B2F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1538-558B2F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1538-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1538-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1538-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1538-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1538-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1538-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1538-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1538-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1538-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1538-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1594-097138-normal">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1594-097138-highlight">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1594-097138">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1594-097138-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1594-097138-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1594-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1594-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1594-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1594-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1594-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1594-817717-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1594-817717-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1594-817717">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1594-817717-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1594-817717-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1681-3949AB-normal">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1681-3949AB-highlight">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1681-3949AB">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1681-3949AB-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1681-3949AB-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1681-757575-normal">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1681-757575-highlight">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1681-757575">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1681-757575-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1681-757575-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1681-817717-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1681-817717-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1681-817717">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1681-817717-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1681-817717-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1681-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1681-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1681-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1681-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1681-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-006064-normal">
+      <IconStyle>
+        <color>ff646000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-006064-highlight">
+      <IconStyle>
+        <color>ff646000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-006064">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-006064-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-006064-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0097A7-normal">
+      <IconStyle>
+        <color>ffa79700</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0097A7-highlight">
+      <IconStyle>
+        <color>ffa79700</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0097A7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0097A7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0097A7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-01579B-normal">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-01579B-highlight">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-01579B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-01579B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-01579B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-097138-normal">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-097138-highlight">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-097138">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-097138-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-097138-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-1A237E-normal">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-1A237E-highlight">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-1A237E">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-1A237E-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-1A237E-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-3949AB-normal">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-3949AB-highlight">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-3949AB">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-3949AB-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-3949AB-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-424242-normal">
+      <IconStyle>
+        <color>ff424242</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-424242-highlight">
+      <IconStyle>
+        <color>ff424242</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-424242">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-424242-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-424242-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-4E342E-normal">
+      <IconStyle>
+        <color>ff2e344e</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-4E342E-highlight">
+      <IconStyle>
+        <color>ff2e344e</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-4E342E">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-4E342E-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-4E342E-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-558B2F-normal">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-558B2F-highlight">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-558B2F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-558B2F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-558B2F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-757575-normal">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-757575-highlight">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-757575">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-757575-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-757575-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-795548-normal">
+      <IconStyle>
+        <color>ff485579</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-795548-highlight">
+      <IconStyle>
+        <color>ff485579</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-795548">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-795548-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-795548-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-817717-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-817717-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-817717">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-817717-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-817717-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-A52714-normal">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-A52714-highlight">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-A52714">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-A52714-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-A52714-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-AFB42B-normal">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-AFB42B-highlight">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-AFB42B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-AFB42B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-AFB42B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-AFB42B-nodesc-normal">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-AFB42B-nodesc-highlight">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-AFB42B-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-AFB42B-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-AFB42B-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-F57C00-normal">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-F57C00-highlight">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-F57C00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-F57C00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-F57C00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-F9A825-normal">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-F9A825-highlight">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-F9A825">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-F9A825-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-F9A825-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FBC02D-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-FBC02D-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-FBC02D">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FBC02D-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FBC02D-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-FF5252-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-FF5252">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FF5252-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FF5252-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Western Maryland</name>
+      <Placemark>
+        <name>Herrington Manor State Park</name>
+        <description>https://birdersguidemddc.org/site/herrington-manor-state-park/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.4481708,39.4537994,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Swallow Falls State Park</name>
+        <description>https://birdersguidemddc.org/site/swallow-falls-state-park/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.4211567,39.4971092,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mt. Nebo WMA</name>
+        <description>https://birdersguidemddc.org/site/mt-nebo-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.3745651,39.4515012,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Broadford Lake</name>
+        <description>https://birdersguidemddc.org/site/broadford-lake/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.3711947,39.4150741,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Loch Lynn Heights Wetlands Trail</name>
+        <description>https://birdersguidemddc.org/site/loch-lynn-heights-wetland-trail/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.3755874,39.3919563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Caroline W. Wilson MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/caroline-w-wilson-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.2895155,39.4325768,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Youghiogheny Reservoir
+</name>
+        <description>https://birdersguidemddc.org/site/youghiogheny-reservoir/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.3851132,39.6872932,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cunningham Swamp WMA</name>
+        <description>https://birdersguidemddc.org/site/cunningham-swamp-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.2351115,39.5730327,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Robbins MOS Sanctuary at Red Run</name>
+        <description>https://birdersguidemddc.org/site/robbins-mos-sanctuary-at-red-run/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.0736442,39.6897826,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Frostburg Reservoir
+</name>
+        <description>https://birdersguidemddc.org/site/piney-reservoir/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -79.0063401,39.706118,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carey Run MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/carey-run-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -78.9928785,39.674134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Finzel's Swamp Preserve
+]]></name>
+        <description>https://birdersguidemddc.org/site/finzel-swamp-preserve/</description>
+        <styleUrl>#icon-1899-4E342E</styleUrl>
+        <Point>
+          <coordinates>
+            -78.9386267,39.6984816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Frostburg Cross Country Trail
+</name>
+        <description>https://birdersguidemddc.org/site/frostburg-cross-country-trail/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.9343751,39.6713669,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Terminus
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-terminus/</description>
+        <styleUrl>#icon-1525-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.7636062,39.6497935,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - North Branch Area]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-north-branch-recreational-area/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.7418411,39.5875331,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Spring Gap
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-spring-gap-oldtown/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.7176384,39.5642112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Oldtown
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-spring-gap-oldtown/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.6174592,39.5414692,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Town Creek Aqueduct]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-town-creek-aqueduct-to-fifteen-mile-creek-aqueduct/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.5440265,39.5233468,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Paw Paw Tunnel
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-town-creek-aqueduct-to-fifteen-mile-creek-aqueduct/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.4608294,39.544379,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Bonds Landing]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-town-creek-aqueduct-to-fifteen-mile-creek-aqueduct/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.4108785,39.5811762,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Fifteen Mile Creek]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-town-creek-aqueduct-to-fifteen-mile-creek-aqueduct/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.3849192,39.6244454,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rocky Gap State Park</name>
+        <description>https://birdersguidemddc.org/site/rocky-gap-state-park/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.6535314,39.7055853,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Green Ridge State Forest</name>
+        <description>https://birdersguidemddc.org/site/green-ridge-state-forest/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.4638254,39.7024967,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Town Hill Overlook</name>
+        <description>https://birdersguidemddc.org/site/green-ridge-state-forest/</description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            -78.4009665,39.6978426,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sideling Hill WMA</name>
+        <description>https://birdersguidemddc.org/site/sideling-hill-wildlife-management-area-and-environs/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -78.3343359,39.65066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Woodmont NRMA</name>
+        <description>https://birdersguidemddc.org/site/sideling-hill-wildlife-management-area-and-environs/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -78.2921932,39.6536375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Indian Springs WMA</name>
+        <description>https://birdersguidemddc.org/site/indian-springs-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -77.9409135,39.6993491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Frederick State Park</name>
+        <description>https://birdersguidemddc.org/site/fort-frederick-state-park-big-pool/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -78.0062389,39.613523,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Antietam National Battlefield</name>
+        <description>https://birdersguidemddc.org/site/antietam-national-battlefield/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -77.7363355,39.4670975,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Greenbrier State Park</name>
+        <description>https://birdersguidemddc.org/site/greenbrier-state-park/</description>
+        <styleUrl>#icon-1899-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            -77.6218342,39.5377873,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Seymour B. Cooper MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/seymour-b-cooper-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4206641,39.6713671,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cunningham Falls State Park</name>
+        <description>https://birdersguidemddc.org/site/cunningham-falls-state-park/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4639675,39.6276811,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Catoctin Mountain Park</name>
+        <description>https://birdersguidemddc.org/site/catoctin-mountain-park/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.43978,39.6267988,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gambrill State Park</name>
+        <description>https://birdersguidemddc.org/site/gambrill-state-park/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4962325,39.4675289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fred J. Archibald Audubon Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/fred-j-archibald-audubon-sanctuary/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2858143,39.3998733,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Audrey Carroll Audubon Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/audrey-carroll-audubon-sanctuary/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2083219,39.4153324,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CLOSED - Lilypons Water Gardens</name>
+        <description>https://birdersguidemddc.org/site/lilypons-water-gardens/</description>
+        <styleUrl>#icon-1594-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.43023,39.293019,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sugarloaf Mountain</name>
+        <description>https://birdersguidemddc.org/site/sugarloaf-mountain/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.3975585,39.2602114,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Brunswick]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.630671,39.311137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Lander]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.5604899,39.3051684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Point of Rocks
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.5404796,39.2729085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Nolands Ferry
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4823464,39.2494814,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Monocacy Aqueduct]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4521324,39.2239238,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Central Maryland</name>
+      <Placemark>
+        <name>McKee-Beshers WMA</name>
+        <description>https://birdersguidemddc.org/site/mckee-beshers-wildlife-management-area-hughes-hollow/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.388611,39.0832655,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Locks 24 & 23 (Riley's & Violette's)
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-pennyfield-violettes-rileys-locks/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.3346585,39.0682881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[C&O Canal - Lock 22 (Pennyfield)
+]]></name>
+        <description>https://birdersguidemddc.org/site/co-canal-mouth-of-monocacy-to-brunswick/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2889096,39.0538713,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Little Bennett Regional Park</name>
+        <description>https://birdersguidemddc.org/site/little-bennett-regional-park/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2877447,39.2461412,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Black Hill Regional Park</name>
+        <description>https://birdersguidemddc.org/site/black-hill-regional-park/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2953307,39.1928033,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Seneca Creek State Park</name>
+        <description>https://birdersguidemddc.org/site/seneca-creek-state-park/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.2530837,39.143098,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wheaton Regional Park</name>
+        <description>https://birdersguidemddc.org/site/wheaton-regional-park-brookside-gardens-brookside-nature-center-pine-lake-area/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0387518,39.0536146,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Meadowside Nature Center</name>
+        <description>https://birdersguidemddc.org/site/rock-creek-regional-park-meadowside-nature-center-lake-frank/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1066841,39.1123369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rock Creek Regional Park</name>
+        <description>https://birdersguidemddc.org/site/rock-creek-regional-park-lake-needwood/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1345119,39.1220682,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Green Farm Conservation Park</name>
+        <description>https://birdersguidemddc.org/site/lois-y-green-conservation-park/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1755022,39.1710681,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blue Mash Nature Trail</name>
+        <description>https://birdersguidemddc.org/site/blue-mash-nature-trail/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1013438,39.1929288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Triadelphia Reservoir</name>
+        <description>https://birdersguidemddc.org/site/triadelphia-reservoir-brighton-dam/</description>
+        <styleUrl>#icon-1899-0097A7</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0112874,39.1999648,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent River State Park - Hipsley Mill Area
+</name>
+        <description>https://birdersguidemddc.org/site/patuxent-river-state-park-hipsley-mill-area/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1144354,39.2657876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent River State Park - Annapolis Rock Rd Area</name>
+        <description>https://birdersguidemddc.org/site/patuxent-river-state-park-annapolis-rock-road-area/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -77.116291,39.2784796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Western Regional Park</name>
+        <description>https://birdersguidemddc.org/site/western-regional-park/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0256836,39.3044959,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Middle Patuxent Environmental Area</name>
+        <description>https://birdersguidemddc.org/site/middle-patuxent-environmental-area/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9182693,39.2124696,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Schooley Mill Park</name>
+        <description>https://birdersguidemddc.org/site/schooley-mill-park/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9598885,39.1699168,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Elkhorn Park</name>
+        <description>https://birdersguidemddc.org/site/lake-elkhorn/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8445462,39.1851894,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rockburn Branch Park</name>
+        <description>https://birdersguidemddc.org/site/rockburn-branch-park/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7628992,39.217896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Kittamaqundi</name>
+        <description>https://birdersguidemddc.org/site/columbia-lake-kittamaqundi/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.853768,39.2157033,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wilde Lake Park</name>
+        <description>https://birdersguidemddc.org/site/wilde-lake/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8587631,39.223936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centennial Park</name>
+        <description>https://birdersguidemddc.org/site/centennial-lake-and-park/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8594124,39.2407142,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>David W. Force Natural Resource Area</name>
+        <description>https://birdersguidemddc.org/site/david-force-natural-resource-area/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8751473,39.2895725,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Howard County Conservancy</name>
+        <description>https://birdersguidemddc.org/site/howard-county-conservancy-mount-pleasant-farm/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8752726,39.3154149,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patapsco Valley State Park - Daniels Area
+</name>
+        <description>https://birdersguidemddc.org/site/patapsco-valley-state-park-daniels-area/</description>
+        <styleUrl>#icon-1899-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8157625,39.3137034,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patapsco Valley State Park - McKeldin Area</name>
+        <description>https://birdersguidemddc.org/site/patapsco-valley-state-park-mckeldin-area/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8869799,39.3533193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patapsco Valley State Park - Henryton Area</name>
+        <description>https://birdersguidemddc.org/site/patapsco-valley-state-park-henryton/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9141282,39.3556958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piney Run Park and Nature Center
+</name>
+        <description>https://birdersguidemddc.org/site/piney-run-park-and-nature-center/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9877103,39.3979274,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Krimgold Park</name>
+        <description>https://birdersguidemddc.org/site/krimgold-park/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0513032,39.428092,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Morgan Run Natural Environment Area</name>
+        <description>https://birdersguidemddc.org/site/morgan-run-natural-environmental-area/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0004148,39.4659192,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Avondale WMA</name>
+        <description>https://birdersguidemddc.org/site/avondale-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0205372,39.5636933,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wakefield Valley Park</name>
+        <description>https://birdersguidemddc.org/site/wakefield-valley-park/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0330788,39.5717666,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hashawha Environmental Center</name>
+        <description>https://birdersguidemddc.org/site/hashawha-environmental-center-bear-branch-nature-center/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9925893,39.6501101,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Liberty Reservoir - Carroll County
+</name>
+        <description>https://birdersguidemddc.org/site/liberty-reservoir-bollinger-mill-road/</description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9011349,39.4416191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Liberty Reservoir - Baltimore County
+</name>
+        <description>https://birdersguidemddc.org/site/liberty-reservoir-cooperative-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8809646,39.4063309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Soldiers Delight Natural Environment Area</name>
+        <description>https://birdersguidemddc.org/site/soldiers-delight-natural-environmental-area/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8311173,39.4167002,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Irvine Nature Center</name>
+        <description>https://birdersguidemddc.org/site/irvine-nature-center/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7627606,39.4329494,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Milford Mill / Villa Nova Park
+</name>
+        <description>https://birdersguidemddc.org/site/millford-mill-aka-villa-nova-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7456388,39.3595625,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Roland</name>
+        <description>https://birdersguidemddc.org/site/lake-roland/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6446931,39.3784695,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oregon Ridge Park</name>
+        <description>https://birdersguidemddc.org/site/oregon-ridge-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6813513,39.4915042,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Torrey C. Brown Rail Trail</name>
+        <description>https://birdersguidemddc.org/site/northern-central-rail-trail-ncrt/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6337296,39.5022071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Loch Raven Reservoir</name>
+        <description>https://birdersguidemddc.org/site/loch-raven-reservoir/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5740872,39.4542937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cromwell Valley Park</name>
+        <description>https://birdersguidemddc.org/site/cromwell-valley-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5466515,39.4139734,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Holt Park</name>
+        <description>https://birdersguidemddc.org/site/holt-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5157744,39.3522148,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gunpowder Falls State Park Hammerman Area</name>
+        <description>https://birdersguidemddc.org/site/gunpowder-falls-state-park-hammerman-dundee-creek-marina/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3462699,39.3609358,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marshy Point Nature Center</name>
+        <description>https://birdersguidemddc.org/site/marshy-point-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3705513,39.3484672,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hart Miller Island</name>
+        <description>https://birdersguidemddc.org/site/hart-miller-island-state-park/</description>
+        <styleUrl>#icon-1681-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3666226,39.25109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Howard Park</name>
+        <description>https://birdersguidemddc.org/site/fort-howard-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4422361,39.1981601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>North Point State Park</name>
+        <description>https://birdersguidemddc.org/site/north-point-state-park/</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            -76.424492,39.222242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Masonville Cove Environmental Education Center</name>
+        <description>https://birdersguidemddc.org/site/masonville-cove-environmental-education-center/</description>
+        <styleUrl>#icon-1899-424242</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5943992,39.2430027,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort McHenry National Monument
+</name>
+        <description>https://birdersguidemddc.org/site/fort-mchenry-national-monument/</description>
+        <styleUrl>#icon-1899-424242</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5806414,39.2641007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patterson Park</name>
+        <description>https://birdersguidemddc.org/site/patterson-park/</description>
+        <styleUrl>#icon-1899-424242</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5798783,39.2896838,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Druid Hill Park</name>
+        <description>https://birdersguidemddc.org/site/druid-hill-park/</description>
+        <styleUrl>#icon-1899-424242</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6452029,39.3200311,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cylburn Arboretum</name>
+        <description>https://birdersguidemddc.org/site/cylburn-arboretum/</description>
+        <styleUrl>#icon-1899-424242</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6513787,39.3521184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bradenbaugh Road</name>
+        <description>https://birdersguidemddc.org/site/bradenbaugh-flats-upper-deer-creek-valley/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5244256,39.6577549,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Eden Mill Nature Center</name>
+        <description>https://birdersguidemddc.org/site/eden-mill-nature-center/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4525769,39.6751503,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rocks State Park</name>
+        <description>https://birdersguidemddc.org/site/rocks-state-park/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4187141,39.6386259,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Harford Glen Environmental Education Center</name>
+        <description>https://birdersguidemddc.org/site/harford-glen-environmental-education-center/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3429682,39.4858353,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Anita C Leight Estuary Center</name>
+        <description>https://birdersguidemddc.org/site/anita-c-leight-estuary-center-otter-point-creek/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.268677,39.4498886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Perryman Park</name>
+        <description>https://birdersguidemddc.org/site/perryman-forest-green-area/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.2167152,39.4718192,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Swan Harbor Farm</name>
+        <description>https://birdersguidemddc.org/site/swan-harbor-farm-and-eleanor-millard-tydings-park-oakington/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1110093,39.5203165,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Millard Tydings Memorial Park</name>
+        <description><![CDATA[https://birdersguidemddc.org/site/tydings-memorial-park-havre-de-grace-marina/ & https://birdersguidemddc.org/site/swan-harbor-farm-and-eleanor-millard-tydings-park-oakington/]]></description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0896208,39.5384939,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>David R. Craig Park</name>
+        <description>https://birdersguidemddc.org/site/tydings-memorial-park-havre-de-grace-marina/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0913255,39.5524535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>North Park</name>
+        <description>https://birdersguidemddc.org/site/tydings-memorial-park-havre-de-grace-marina/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0946003,39.5569759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Susquehanna State Park</name>
+        <description>https://birdersguidemddc.org/site/susquehanna-state-park/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1539775,39.6081941,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Conowingo Dam</name>
+        <description>https://birdersguidemddc.org/site/conowingo-dam-fishermans-park/</description>
+        <styleUrl>#icon-1899-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1740561,39.655596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Courthouse Point Managed Hunting Area</name>
+        <description>https://birdersguidemddc.org/site/courthouse-point-managed-hunting-area/</description>
+        <styleUrl>#icon-1899-795548</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8759079,39.5059356,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bethel Managed Hunting Area
+</name>
+        <description>https://birdersguidemddc.org/site/bethel-managed-hunting-area/</description>
+        <styleUrl>#icon-1899-795548</styleUrl>
+        <Point>
+          <coordinates>
+            -75.7830157,39.5213676,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bohemia River State Park</name>
+        <description>https://birdersguidemddc.org/site/bohemia-river-state-park/</description>
+        <styleUrl>#icon-1899-795548</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8557891,39.4684333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Eastern Shore Region</name>
+      <Placemark>
+        <name>Sassafras NRMA</name>
+        <description>https://birdersguidemddc.org/site/sassafras-natural-resources-management-area-and-turners-creek-park/</description>
+        <styleUrl>#icon-1899-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9937383,39.3543463,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Millington WMA</name>
+        <description>https://birdersguidemddc.org/site/millington-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -75.7966545,39.305115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cypress Branch State Park</name>
+        <description>https://birdersguidemddc.org/site/cypress-branch-state-park/</description>
+        <styleUrl>#icon-1899-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8362564,39.2709694,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Buckingham Wharf</name>
+        <description>https://birdersguidemddc.org/site/buckingham-public-landing-morgnec-road-public-landing/</description>
+        <styleUrl>#icon-1525-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0145116,39.2379248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Morgnec Road Public Landing</name>
+        <description>https://birdersguidemddc.org/site/buckingham-public-landing-morgnec-road-public-landing/</description>
+        <styleUrl>#icon-1525-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0365852,39.236066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Wilmer Park & Chestertown WWTP
+]]></name>
+        <description>https://birdersguidemddc.org/site/chestertown-wilmer-park-wayne-gilchrest-trail-chestertown-wwtp/</description>
+        <styleUrl>#icon-1899-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0656137,39.2046412,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chesapeake Farms</name>
+        <description>https://birdersguidemddc.org/site/chesapeake-farms-st-pauls-millpond/</description>
+        <styleUrl>#icon-1538-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1824744,39.1795709,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Eastern Neck NWR</name>
+        <description>https://birdersguidemddc.org/site/eastern-neck-national-wildlife-refuge/</description>
+        <styleUrl>#icon-1899-558B2F</styleUrl>
+        <Point>
+          <coordinates>
+            -76.2244237,39.0311059,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Matapeake Park</name>
+        <description>https://birdersguidemddc.org/site/matapeake-fishing-pier-matapeake-clubhouse-beach/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3537255,38.9568116,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Terrapin Nature Park</name>
+        <description>https://birdersguidemddc.org/site/terrapin-nature-park/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3207585,38.9897719,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ferry Point Park</name>
+        <description>https://birdersguidemddc.org/site/ferry-point-park/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.2486608,38.9750208,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chesapeake Bay Environmental Center</name>
+        <description>https://birdersguidemddc.org/site/chesapeake-bay-environmental-center-horsehead/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.229038,38.947507,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wye Island NRMA</name>
+        <description>https://birdersguidemddc.org/site/wye-island-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1448669,38.892436,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Conquest Preserve</name>
+        <description>https://birdersguidemddc.org/site/conquest-preserve/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1112338,39.0936118,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Tuckahoe State Park - Queen Anne's County
+]]></name>
+        <description>https://birdersguidemddc.org/site/tuckahoe-state-park-queen-annes/</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9575731,38.9447139,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tuckahoe State Park - Caroline County
+</name>
+        <description>https://birdersguidemddc.org/site/tuckahoe-state-park/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.939509,38.9673608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Adkins Arboretum</name>
+        <description>https://birdersguidemddc.org/site/adkins-arboretum/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9312835,38.9546079,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pelot MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/pelot-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.7829202,38.9935267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Daniel Crouse Memorial Park</name>
+        <description>https://birdersguidemddc.org/site/daniel-crouse-memorial-park-caroline-county-visitor-center/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8376843,38.8885464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Martinak State Park</name>
+        <description>https://birdersguidemddc.org/site/martinak-state-park/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8363646,38.8658926,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Idylwild WMA
+</name>
+        <description>https://birdersguidemddc.org/site/idylwild-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.7325975,38.7273011,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chesapeake Forest - North Tara Road</name>
+        <description>https://birdersguidemddc.org/site/chesapeake-forest-north-tara-road/</description>
+        <styleUrl>#icon-1538-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.790473,38.653198,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Skeleton Creek Rd & Bethlehem Rd
+]]></name>
+        <description>https://birdersguidemddc.org/site/skeleton-creek-road-and-bethlehem-road/</description>
+        <styleUrl>#icon-1538-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9705455,38.7231556,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Choptank Marina</name>
+        <description>https://birdersguidemddc.org/site/choptank-marina/</description>
+        <styleUrl>#icon-1525-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.950852,38.6815735,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mill Creek MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/mill-creek-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0675906,38.9095123,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pickering Creek Audubon Center</name>
+        <description>https://birdersguidemddc.org/site/pickering-creek-audubon-center/</description>
+        <styleUrl>#icon-1899-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1234837,38.8599191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marengo Woods MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/marengo-woods-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1640515,38.8061242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Claiborne Landing</name>
+        <description>https://birdersguidemddc.org/site/claiborne-landing/</description>
+        <styleUrl>#icon-1525-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.2803292,38.8373677,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Poplar Island (Tour Only)
+</name>
+        <description>https://birdersguidemddc.org/site/poplar-island/</description>
+        <styleUrl>#icon-1681-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3836481,38.7612122,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Black Walnut Point NRMA</name>
+        <description>https://birdersguidemddc.org/site/black-walnut-point-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3434242,38.6811702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CLOSED - Bill Burton Fishing Pier State Park</name>
+        <description>Talbot County: https://birdersguidemddc.org/site/bill-burton-fishing-pier-state-park-talbot-county-side/ Dorchester County: https://birdersguidemddc.org/site/cambridge-bill-burton-fishing-pier-state-park-dorchester-county-side/</description>
+        <styleUrl>#icon-1594-817717</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0471414,38.5911265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cambridge - Sailwinds Park</name>
+        <description>https://birdersguidemddc.org/site/cambridge-sailwinds-park-visitor-center/</description>
+        <styleUrl>#icon-1899-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0641036,38.5715724,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cambridge - Oakley St.
+</name>
+        <description>https://birdersguidemddc.org/site/cambridge-oakley-street/</description>
+        <styleUrl>#icon-1538-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.07778,38.5794883,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cambridge - Gerry Boyle Park</name>
+        <description>https://birdersguidemddc.org/site/cambridge-great-marsh-park/</description>
+        <styleUrl>#icon-1899-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0789657,38.5836335,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blackwater NWR</name>
+        <description>https://birdersguidemddc.org/site/blackwater-wildlife-refuge/</description>
+        <styleUrl>#icon-1899-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1001657,38.4320993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Taylors Island</name>
+        <description>https://birdersguidemddc.org/site/taylors-island/</description>
+        <styleUrl>#icon-1538-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.2976531,38.4700431,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hooper Islands</name>
+        <description>https://birdersguidemddc.org/site/hoopers-island/</description>
+        <styleUrl>#icon-1538-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.1885532,38.2834563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fishing Bay WMA</name>
+        <description>https://birdersguidemddc.org/site/elliott-island-road-fishing-bay-wildlife-management-area-eastern-section/</description>
+        <styleUrl>#icon-1538-01579B</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9301772,38.3389336,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nanticoke River WMA - Nutters Neck
+</name>
+        <description>https://birdersguidemddc.org/site/nanticoke-river-wildlife-management-area-nutters-neck/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8040879,38.3769836,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Tyaskin & Wetipquin Parks]]></name>
+        <description>https://birdersguidemddc.org/site/tyaskin-park-wetipquin-park/</description>
+        <styleUrl>#icon-1525-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.871854,38.3274451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cedar Hill Marina</name>
+        <description>https://birdersguidemddc.org/site/cedar-hill-marina-and-park/</description>
+        <styleUrl>#icon-1525-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8891478,38.3110132,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Roaring Point Park & Nanticoke Harbor
+]]></name>
+        <description>https://birdersguidemddc.org/site/roaring-point-nanticoke-harbor/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.9126091,38.2665564,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ellis Bay WMA</name>
+        <description>https://birdersguidemddc.org/site/ellis-bay-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8563004,38.2651833,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pemberton Historical Park</name>
+        <description>https://birdersguidemddc.org/site/pemberton-historical-park/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.6438809,38.346042,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Salisbury City Park</name>
+        <description>https://birdersguidemddc.org/site/schumakerpond/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.5911718,38.3644168,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Schumaker Park</name>
+        <description>https://birdersguidemddc.org/site/schumakerpond/</description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            -75.5664912,38.3482558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Deal Island WMA</name>
+        <description>https://birdersguidemddc.org/site/deal-island-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8790475,38.1770726,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rumbley Boat Ramp</name>
+        <description>https://birdersguidemddc.org/site/rumbley-boat-ramp/</description>
+        <styleUrl>#icon-1525-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8613433,38.0924377,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Riverview Rd & Frenchtown Rd
+]]></name>
+        <description>https://birdersguidemddc.org/site/rumbley-boat-ramp/</description>
+        <styleUrl>#icon-1538-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8460205,38.0901433,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fairmount WMA</name>
+        <description>https://birdersguidemddc.org/site/fairmount-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8171824,38.0837876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Smith Island</name>
+        <description>https://birdersguidemddc.org/site/smith-island/</description>
+        <styleUrl>#icon-1681-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -76.0299356,37.9812352,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Janes Island State Park</name>
+        <description>https://birdersguidemddc.org/site/janes-island-state-park/</description>
+        <styleUrl>#icon-1899-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.8478754,38.0108373,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Irish Grove MOS Sanctuary 
+</name>
+        <description>https://birdersguidemddc.org/site/irish-grove-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            -75.7281932,37.9894109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hickory Point Natural Area</name>
+        <description>https://birdersguidemddc.org/site/pocomoke-state-forest-hickory-point-cypress-swamp-natural-area/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.640387,38.0294345,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pocomoke River - Milburn Landing</name>
+        <description>https://birdersguidemddc.org/site/pocomoke-river-state-park-shad-landing-milburn-landing/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.4951296,38.1220251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pocomoke River - Shad Landing
+</name>
+        <description>https://birdersguidemddc.org/site/pocomoke-river-state-park-shad-landing-milburn-landing/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.4410982,38.1398898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>EA Vaughn WMA</name>
+        <description>https://birdersguidemddc.org/site/e-a-vaughn-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.3799013,38.0780381,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>George Island Landing</name>
+        <description>https://birdersguidemddc.org/site/truitts-landing-and-other-bayside-landings/</description>
+        <styleUrl>#icon-1525-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.3613374,38.0412873,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Taylor Landing</name>
+        <description>https://birdersguidemddc.org/site/truitts-landing-and-other-bayside-landings/</description>
+        <styleUrl>#icon-1525-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.3645238,38.0764591,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Truitts Landing</name>
+        <description>https://birdersguidemddc.org/site/truitts-landing-and-other-bayside-landings/</description>
+        <styleUrl>#icon-1525-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.3382052,38.0994949,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Public Landing</name>
+        <description>https://birdersguidemddc.org/site/truitts-landing-and-other-bayside-landings/</description>
+        <styleUrl>#icon-1525-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.2864377,38.1491262,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>South Point</name>
+        <description>https://birdersguidemddc.org/site/south-point/</description>
+        <styleUrl>#icon-1525-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.1913316,38.2164333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Assateague Island National Seashore & State Park
+]]></name>
+        <description>https://birdersguidemddc.org/site/assateague-island-national-seashore-assateague-island-state-park/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.1502674,38.2151369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sun Outdoors Ocean City (Castaways)
+</name>
+        <description>https://birdersguidemddc.org/site/castaways-rv-resort-campgrounds/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.1197151,38.3047199,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Heron Park (formerly Berlin Falls Park)</name>
+        <description>https://birdersguidemddc.org/site/heron-park/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.2172594,38.3361161,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Isle of Wight DNR Management Area</name>
+        <description>https://birdersguidemddc.org/site/isle-of-wight-park-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.1049137,38.3923618,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>West Ocean City Pond</name>
+        <description>https://birdersguidemddc.org/site/west-ocean-city-pond/</description>
+        <styleUrl>#icon-1538-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.103876,38.3429734,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ocean City Park-n-Ride</name>
+        <description>https://birdersguidemddc.org/site/west-ocean-city-park-n-ride-homer-gudelsky-park/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.103685,38.3326103,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Homer Gudelsky Park</name>
+        <description>https://birdersguidemddc.org/site/west-ocean-city-park-n-ride-homer-gudelsky-park/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.0959945,38.3298093,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Skimmer Island (And Viewing Locations)
+</name>
+        <description>https://birdersguidemddc.org/site/ocean-city-skimmer-island/</description>
+        <styleUrl>#icon-1681-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.0943301,38.3365855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Ocean City Inlet & Sunset Park
+]]></name>
+        <description>https://birdersguidemddc.org/site/ocean-city-inlet/</description>
+        <styleUrl>#icon-1899-3949AB</styleUrl>
+        <Point>
+          <coordinates>
+            -75.088126,38.3251412,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Southern Maryland</name>
+      <Placemark>
+        <name>Sandy Point State Park</name>
+        <description>https://birdersguidemddc.org/site/sandy-point-state-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4040354,39.0192353,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Downs Park</name>
+        <description>https://birdersguidemddc.org/site/downs-memorial-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4402897,39.1094744,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Smallwood Park</name>
+        <description>https://birdersguidemddc.org/site/fort-smallwood-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4808893,39.163801,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CLOSED - Swan Creek Wetlands</name>
+        <description>https://birdersguidemddc.org/site/swan-creek-wetlands-cox-creek-dredged-material-containment-facility/</description>
+        <styleUrl>#icon-1594-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5424947,39.1938383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Waterford Park</name>
+        <description>https://birdersguidemddc.org/site/lake-waterford-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5590473,39.1127595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kinder Farm Park</name>
+        <description>https://birdersguidemddc.org/site/kinder-farm-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5827158,39.101066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mandares Creek MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/mandares-creek-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5805456,39.0333564,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Greenbury Point</name>
+        <description>https://birdersguidemddc.org/site/greenbury-point/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4542466,38.9886825,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Quiet Waters Park</name>
+        <description>https://birdersguidemddc.org/site/quiet-waters-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5008178,38.9377307,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Smithsonian Environmental Research Center</name>
+        <description>https://birdersguidemddc.org/site/smithsonian-environmental-research-center/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5564251,38.9015623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jug Bay Wetlands Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/jug-bay-wetlands-sanctuary/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7011095,38.7848616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Davidsonville Park</name>
+        <description>https://birdersguidemddc.org/site/davidsonville-park/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6789913,38.9353863,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piney Orchard Nature Preserve</name>
+        <description>https://birdersguidemddc.org/site/piney-orchard-nature-preserve/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7231985,39.0558831,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent Research Refuge - North Tract</name>
+        <description>https://birdersguidemddc.org/site/patuxent-research-refuge-north-tract/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7717006,39.077742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oxbow Lake Trail</name>
+        <description>https://birdersguidemddc.org/site/oxbow-natural-area/</description>
+        <styleUrl>#icon-1899-097138</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8066808,39.113516,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rocky Gorge Reservoir
+</name>
+        <description>https://birdersguidemddc.org/site/rocky-gorge-reservoir-supplee-lane-recreation-area-duckett-dam/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8843843,39.1239845,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent Research Refuge - South Track
+</name>
+        <description>https://birdersguidemddc.org/site/patuxent-research-refuge-south-tract-national-wildlife-visitor-center/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7990493,39.0264262,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fran Uhler Natural Area</name>
+        <description>https://birdersguidemddc.org/site/fran-uhler-natural-area/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.761784,39.0213736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Governor Bridge Natural Area</name>
+        <description>https://birdersguidemddc.org/site/governor-bridge-natural-area/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.699162,38.94686,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Buddy Attick Lake Park</name>
+        <description>https://birdersguidemddc.org/site/greenbelt-lake-municipal-park-buddy-attick-lake-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8879845,39.0045746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Greenbelt Park</name>
+        <description>https://birdersguidemddc.org/site/greenbelt-national-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8975474,38.982649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Artemesia Natural Area</name>
+        <description>https://birdersguidemddc.org/site/lake-artemesia-natural-area/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9199001,38.9850112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Anacostia River Trail & Parks
+]]></name>
+        <description>https://birdersguidemddc.org/site/bladensburg-waterfront-park-anacostia-river-trail/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9393321,38.9304182,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Schoolhouse Pond</name>
+        <description>https://birdersguidemddc.org/site/schoolhouse-pond/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7520481,38.8190651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rosaryville State Park</name>
+        <description>https://birdersguidemddc.org/site/rosaryville-state-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7994954,38.780762,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Mount Calvert Historical & Archaeological Park]]></name>
+        <description>https://birdersguidemddc.org/site/patuxent-river-park-mount-calvert-historical-archaeological-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.714546,38.7852529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent River Park - Jug Bay Natural Area</name>
+        <description>https://birdersguidemddc.org/site/patuxent-river-park-jug-bay-natural-area/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7110902,38.7736423,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patuxent River Park - Selbys Landing
+</name>
+        <styleUrl>#icon-1525-AFB42B-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7007827,38.7525711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jug Bay Natural Area - St. Thomas Church Road</name>
+        <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7276117,38.7414417,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Merkle Wildlife Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/merkle-nrma/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7080986,38.7278057,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Milltown Landing NRMA</name>
+        <description>https://birdersguidemddc.org/site/milltown-landing-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7012942,38.6309714,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cedarville State Forest</name>
+        <description>https://birdersguidemddc.org/site/cedarville-state-forest/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.8344099,38.6571979,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piscataway MOS Sanctuary</name>
+        <description>https://birdersguidemddc.org/site/piscataway-mos-sanctuary/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9498756,38.6925091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Oxon Cove Park & Oxon Hill Farm]]></name>
+        <description>https://birdersguidemddc.org/site/oxon-cove-park-oxon-hill-farm/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0077656,38.8019485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Foote Park</name>
+        <description>https://birdersguidemddc.org/site/fort-foote-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0251975,38.7669059,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Washington Park</name>
+        <description>https://birdersguidemddc.org/site/fort-washington-national-park/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0287469,38.711901,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piscataway Park General Area
+</name>
+        <description>https://birdersguidemddc.org/site/piscataway-national-park-national-colonial-farm-wharf-road/</description>
+        <styleUrl>#icon-1899-AFB42B</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0498981,38.6873401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chapman State Park</name>
+        <description>https://birdersguidemddc.org/site/chapman-state-park-chapman-residual-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -77.115994,38.615062,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Indian Head Rail Trail</name>
+        <description>https://birdersguidemddc.org/site/indian-head-rail-trail/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1127598,38.5916036,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mattawoman Natural Enviromental Area
+</name>
+        <description>https://birdersguidemddc.org/site/mattawoman-natural-environmental-area/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1411331,38.5824724,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Smallwood State Park</name>
+        <description>https://birdersguidemddc.org/site/smallwood-state-park/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -77.1852036,38.5514406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Myrtle Grove WMA</name>
+        <description>https://birdersguidemddc.org/site/myrtle-grove-wildlife-management-area/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -77.0834871,38.5494592,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Allens Fresh Natural Area</name>
+        <description>https://birdersguidemddc.org/site/allens-fresh-natural-area/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -76.9326167,38.4177918,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Maxwell Hall Park</name>
+        <description>https://birdersguidemddc.org/site/maxwell-hall-park/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6987411,38.529145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Indian Creek NRMA</name>
+        <description>https://birdersguidemddc.org/site/indian-creek-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6910152,38.5149684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kings Landing Park</name>
+        <description>https://birdersguidemddc.org/site/kings-landing-park-huntingtown-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.669861,38.625915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Huntingtown NRMA</name>
+        <description>https://birdersguidemddc.org/site/kings-landing-park-huntingtown-natural-resources-management-area/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6564229,38.642068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ward Farm Recreation and Nature Park</name>
+        <description>https://birdersguidemddc.org/site/ward-farm-recreation-nature-park/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6453286,38.7211213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>North Beach</name>
+        <description>https://birdersguidemddc.org/site/north-beach/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5310669,38.7073406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chesapeake Beach</name>
+        <description>https://birdersguidemddc.org/site/chesapeake-beach/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5336539,38.6947907,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>American Chestnut Land Trust</name>
+        <description>https://birdersguidemddc.org/site/american-chestnut-land-trust-parkers-creek-preserve/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.532305,38.546781,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Battle Creek Cypress Swamp</name>
+        <description>https://birdersguidemddc.org/site/battle-creek-cypress-swamp-sanctuary/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.591759,38.4900439,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Flag Ponds Nature Park</name>
+        <description>https://birdersguidemddc.org/site/flag-ponds-nature-park/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4585791,38.4465413,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Calvert Cliffs State Park</name>
+        <description>https://birdersguidemddc.org/site/calvert-cliffs-state-park/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.429346,38.39564,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jefferson Patterson Park and Museum</name>
+        <description>https://birdersguidemddc.org/site/jefferson-patterson-park-and-museum/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5065645,38.399649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Solomons Island General Area
+</name>
+        <description>https://birdersguidemddc.org/site/solomons-island/</description>
+        <styleUrl>#icon-1899-006064</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4582854,38.3215133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Myrtle Point Park</name>
+        <description>https://birdersguidemddc.org/site/myrtle-point-park/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.4972911,38.3333721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Greenwell State Park</name>
+        <description>https://birdersguidemddc.org/site/greenwell-state-park/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5212999,38.3691856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Historic Sotterley</name>
+        <description>https://birdersguidemddc.org/site/sotterley/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.540226,38.376097,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Newtowne Neck State Park</name>
+        <description>https://birdersguidemddc.org/site/newtowne-neck-state-park/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.7120704,38.2344179,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abells Wharf</name>
+        <description>https://birdersguidemddc.org/site/beauvue-ponds-and-abells-wharf/</description>
+        <styleUrl>#icon-1525-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.6451713,38.2605691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Salem State Forest</name>
+        <description>https://birdersguidemddc.org/site/st-marys-river-state-park-salem-state-forest/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5536346,38.2705675,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[St. Mary's River State Park]]></name>
+        <description>https://birdersguidemddc.org/site/st-marys-river-state-park-salem-state-forest/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.5398159,38.2499791,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point Lookout State Park</name>
+        <description>https://birdersguidemddc.org/site/point-lookout-state-park/</description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <Point>
+          <coordinates>
+            -76.3370293,38.0592218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

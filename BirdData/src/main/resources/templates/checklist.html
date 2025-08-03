@@ -1,0 +1,149 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="~{fragments/navbar}"></div>
+
+
+
+
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	
+	<title>Local eBird Checklists</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!--	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	
+	<link rel="stylesheet" href="/static/scripts/lib/leaflet/leaflet.css" />
+	<script src="/static/scripts/lib/leaflet/leaflet.js"></script>
+	-->
+
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.my-label {
+			position: absolute;
+			width: 100px;
+			font-size: 20px;
+		}
+	</style>
+
+
+</head>
+
+<body style="margin:30;padding:2">
+	<center>Region Recent Bird Checklists</center>
+	<h5 th:text="${number}"></h5>
+	<h5 th:text="${placeName}"></h5>
+
+	<table style="width:95%" border="1" class="table table-striped table-responsive-md">
+		<thead>
+			<tr>
+
+
+				<th>User Name</th>
+				<th>Num Species</th>
+				<th>Hierarchical Name </th>
+				<th>Location Name </th>
+				<th>Obs Date </th>
+				<th>Obs Time </th>
+				<th>List ID Link</th>
+
+
+
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr th:each="bird:${checklist}">
+
+				<td th:text="${bird.userDisplayName}"></td>
+				<td th:text="${bird.numSpecies}"></td>
+				<td th:text="${bird.loc.hierarchicalName}"></td>
+				<td th:text="${bird.loc.name}"></td>
+				<td th:text="${bird.obsDt}"></td>
+				<td th:text="${bird.obsTime}"></td>
+				<td><a th:href="@{/viewchecklist(subid=${bird.subId}, lat=${bird.lat},lon=${bird.lon})}" th:text="${bird.subId}"></a> </td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<div id="mapid" th:attr="style=${size}"></div>
+
+	<!--<div id="mapid" style="width: 1000px; height: 800px;"></div>-->
+
+
+	<script th:inline="javascript">
+		var mylat = [[${lat}]];
+		var mylon = [[${lon}]];
+		var mapsize = [[${mapsize}]];
+		var zoom = [[${zoom}]];
+		var data = [[${pointList}]];
+		var dist = [[${dist}]];
+		var back = [[${back}]];
+
+		var mymap = L.map('mapid').setView([mylat, mylon], zoom);
+
+		new L.tileLayer(
+			'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 20
+		}).addTo(mymap);
+
+		for (var i = 0; i < data.length; i++) {
+
+			var mapurl = '<a href="/viewchecklist?subid=' + data[i].subId + '&lat='
+				+ data[i].lat + '&lon=' + data[i].lon + '">' + data[i].subId + '</a><p>';
+
+			if (data[i].lat !== null && data[i].lon !== "") {
+				// window.alert(data[i]);		
+
+				L.marker([data[i].lat, data[i].lon]).addTo(mymap)
+					.bindPopup(
+
+						data[i].textDescription + '<p>' + mapurl);
+			}
+		}
+
+
+		mymap.on('click', function (e) {
+			var lt = String(e.latlng.lat), lg = String(e.latlng.lng);
+			var name = "link";
+			var recents = '<a href="/recent?lat=' + lt + '&lon=' + lg + '&dist=40&back=3' + '">' + "Recent" + '</a>' + '<p>';
+			var checklists = '<a href="/checklist2?lat=' + lt + '&lon=' + lg + '">' + "Checklists (US only)" + '</a>' + '<p>';
+
+
+			var specieslistlink = '<a href="/species?lat=' + lt + '&lon=' + lg + '">' + "Species List  (US only)" + '</a>' + '<p>';
+			var hotspots = '<a href="/hotspot?lat=' + lt + '&lon=' + lg + '&dist=' + dist + '&back=' + back + '">' + "Hotspot List" + '</a>' + '<p>';
+			var notable = '<a href="/notable?lat=' + lt + '&lon=' + lg + '&dist=' + dist + '&back=' + back + '">' + "Notable List (US only)" + '</a>' + '<p>';
+			var displaylinks = recents + checklists + specieslistlink + hotspots + notable;
+
+			var popup = L.popup().setLatLng(e.latlng).setContent(displaylinks).openOn(mymap);
+
+		});
+		
+	</script>
+	<pre>
+
+
+</pre>
+
+</body>
+
+</html>

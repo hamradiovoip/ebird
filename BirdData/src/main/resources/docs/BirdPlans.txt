@@ -1,0 +1,36 @@
+
+
+Observations
+
+GET Recent observations in a region   https://api.ebird.org/v2/data/obs/{{regionCode}}/recent
+
+GET Recent notable observations in a region : https://api.ebird.org/v2/data/obs/{{regionCode}}/recent/notable
+
+GET Recent observations of a species in a region : https://api.ebird.org/v2/data/obs/{{regionCode}}/recent/{{speciesCode}}
+
+GET Recent nearby observations : https://api.ebird.org/v2/data/obs/geo/recent?lat={{lat}}&lng={{lng}}
+
+GET Recent nearby observations of a species : https://api.ebird.org/v2/data/obs/geo/recent/{{speciesCode}}?lat={{lat}}&lng={{lng}}
+
+GET Nearest observations of a species : https://api.ebird.org/v2/data/nearest/geo/recent/{{speciesCode}}?lat={{lat}}&lng={{lng}}
+
+GET Recent nearby notable observations   :  https://api.ebird.org/v2/data/obs/geo/recent/notable?lat={{lat}}&lng={{lng}}
+
+GET Historic observations on a date : https://api.ebird.org/v2/data/obs/{{regionCode}}/historic/{{y}}/{{m}}/{{d}}
+
+
+
+HotSpots
+Hotspots in a region : https://api.ebird.org/v2/ref/hotspot/{{regionCode}}
+
+nearby : coords https://api.ebird.org/v2/ref/hotspot/geo?lat={{lat}}&lng={{lng}}
+    hotspot info: https://api.ebird.org/v2/ref/hotspot/info/{{locId}}
+
+
+Misc (product)
+
+
+regional stats on date : https://api.ebird.org/v2/product/stats/{{regionCode}}/{{y}}/{{m}}/{{d}}
+
+view checklist called from others https://api.ebird.org/v2/product/checklist/view/{{subId}}
+
