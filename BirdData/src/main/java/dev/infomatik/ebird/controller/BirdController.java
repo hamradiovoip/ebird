@@ -1,6 +1,6 @@
 package dev.infomatik.ebird.controller;
 /**
- * Controller for handling API web requests for my bird web site. Passes requests to eBird API service
+ * Controller for handling API web requests for my bird web site. Passes requests to eBird API via service class
  * https://documenter.getpostman.com/view/664302/S1ENwy59#intro
  */
 
@@ -59,11 +59,12 @@ public class BirdController {
 
 	@Autowired
 	private HttpServletRequest request;
+
 	/**
 	 * Logging
 	 */
 	protected static final Logger logger = LogManager.getLogger(); // TODO
-	
+
 	/* */
 	//private List <String> birdNames;
 	/* */
@@ -87,7 +88,6 @@ public class BirdController {
 	@Autowired
 	BirdService service;
 
-
 	// get all birds, taxonomy "https://api.ebird.org/v2/reflogger/taxonomy/ebird"
 	// c("country", "subnational1", "subnational2"))
 	//	  url <- glue("https://api.ebird.org/v2/ref/region/list/{region_type}/{parent_region}")
@@ -95,16 +95,19 @@ public class BirdController {
 	//	https://api.ebird.org/v2/data/obs/{{regionCode}}/recent/{{speciesCode}}
 
 
-	
-    @RequestMapping("/robots.txt")
-    @ResponseBody
-    public String robots() {
-        return "User-agent: *\n" +
-                "Disallow: /";
-    }
-	
 	/**
-	 * TODO
+	 * 
+	 * @return string to tell bots not to search here.
+	 */
+	@RequestMapping("/robots.txt")
+	@ResponseBody
+	public String robots() {
+		return "User-agent: *\n" +
+				"Disallow: /";
+	}
+
+	/**
+	 * TODO getting 404 error, could be api does not supported it now
 	 * Get a list of countries or regions that share a border with this one.
 	 * https://api.ebird.org/v2/ref/adjacent/{{regionCode}}
 	 * @param model
@@ -114,18 +117,26 @@ public class BirdController {
 	 * @return
 	 */
 	@GetMapping("/adjacentregions")
-	public List <Region> adjacentregions(Model model, 
+	public String adjacentregions(Model model, 
 			@RequestParam(value = "lat", required = true) double lat,
 			@RequestParam(value = "lon", required = true) double lon,		
 			@RequestParam(value = "region", required = false) String regionString) {
 
+		
+		System.out.println(" adjacentregions " + regionString);
+		
 		// lookup adjacent regions
-		List <Region> region =  service.getAdjacentRegions( lat, lon, regionString);		
-
-		return region;
+		List <Region> regionList =  service.getAdjacentRegions(lat, lon, regionString);		
+		
+		model.addAttribute("regionlist", regionList);
+		
+		return "regionlist";		
+		
+		// http://localhost:8088/adjacentregions?lat=39.4798135&lon=-77.6325412&=region=US-MD
+		
 	}
-	
-	
+
+
 	/**
 	 * TODO
 	 * Get information on the name and geographical area covered by a region.
@@ -150,7 +161,7 @@ public class BirdController {
 
 		return s;	
 	}
-	
+
 	/**
 	 * TODO
 	 * Get a summary of the number of checklist submitted, species seen and contributors on a given date for a country or region.
@@ -175,11 +186,9 @@ public class BirdController {
 
 		try {
 			regionCode= service.getRegionCode(lat, lon);
-			//System.out.println("regioncode = "+ regionCode);
 
 			String s = service.getStatsRegion(regionCode, year, month, day);
 
-			//System.out.println("getStatsRegion = "+ s);
 
 		} catch (Exception e) {
 			model.addAttribute("error", "Coordinates outside of US");
@@ -191,8 +200,8 @@ public class BirdController {
 
 		return "err";		
 	}
-	
-	
+
+
 
 	/**
 	 * TODO
@@ -213,7 +222,6 @@ public class BirdController {
 
 		try {
 			regioncode= service.getRegionCode(lat, lon);
-			//	System.out.println("regioncode = "+ regioncode);
 
 		} catch (Exception e) {
 
@@ -254,8 +262,6 @@ public class BirdController {
 		if(commonName == null || commonName.isEmpty()) {
 			commonName = speciesCode;		
 		}
-
-		//		System.out.println("speciesCode= " + speciesCode +  " commonName="+commonName);
 
 		int maxSize = nearby.size();
 
@@ -385,7 +391,7 @@ public class BirdController {
 			model.addAttribute("error", "FCC database problem or coordinates outside of US");
 			logger.error("FCC database problem or coordinates outside of US");
 			e.printStackTrace();
-			return "err";
+			return "error";
 		}
 
 		notableList = notable.getNotable();
@@ -397,7 +403,6 @@ public class BirdController {
 			String comName= element.getComName();
 			String subId = element.getSubId();
 
-			// System.out.println("notable: " + element.getSubId() + " " +element.getComName());
 			boolean flag = true;
 
 			// go through and see if it is already in the list
@@ -416,11 +421,6 @@ public class BirdController {
 			//				System.out.println("duplicate: " + element.getComName() + " " +element.getComName());
 
 		}
-
-		//		System.out.println("notableList size: " + notableList.size());
-		//		System.out.println("pointList  size: " + pointList.size());		
-		//		System.out.println("noDupSet  size: " + noDupSet.size());
-
 
 		// TODO use hash to get rid of duplicates, showing a lot of the same list and birds
 		int maxSize = noDupSet.size();
@@ -474,7 +474,6 @@ public class BirdController {
 		List<Recent> recentList = service.getRecent(lat, lon, dist, back); 
 
 		int maxSize = recentList.size();
-		//System.out.println("maxSize = "+ maxSize);
 
 		HashSet<String> noDupSet = new HashSet<String>();	
 		HashSet<String> noDupSpecices = new HashSet<String>();	
@@ -483,12 +482,6 @@ public class BirdController {
 
 
 			Recent recent = recentList.get(i);
-
-			//			String comName = service.getCommonName(recent.getSpeciesCode());
-			//			System.out.println("comName " + comName + " recent com name:" +recent.getComName());
-
-
-			//System.out.println("i= " + (i+1) +" recent = "+ recent.getObsDt() + " " + recent.getComName());
 
 			MapPoints point = new MapPoints();
 			point.setLat(recent.getLat());
@@ -502,18 +495,14 @@ public class BirdController {
 			point.setTextDescription(recent.getLocName());
 
 			pointList.add(point);
-			//System.out.println("point = "+ point);
 
 			recentListWithCoords.add(recent);
 
 		}
 
-		//	System.out.println("noDupSpecices = "+ noDupSpecices);
-
 
 		//	String s1 = service.getRegionCode(lat, lon);
 		//	System.out.println("results from fcc  = "+ s1);
-
 
 		//        // testing stats
 		//		try {
@@ -523,12 +512,9 @@ public class BirdController {
 		//		} catch (IOException e) {
 		//			// TODO Auto-generated catch block
 		//			e.printStackTrace();
-		//		}
-		//		
+		//		}	
 
 		//	service.getNearestObsSpecies( "blujay",  lat, lon, 10, 12);
-
-
 		//System.out.println("pointList = "+ pointList);
 
 
@@ -572,8 +558,6 @@ public class BirdController {
 
 		Coords coords = service.getCoordsState(region);
 		List <Region> regionAdjList =  service.getAdjacentRegions(coords.getLat(), coords.getLon(), region);	
-
-		//System.out.println("regionAdjList = "+ regionAdjList);
 
 		int maxSize = hotspotList.size();
 
@@ -630,15 +614,14 @@ public class BirdController {
 	@GetMapping("/custom")
 	public String custom(Model model)	throws IOException  {
 		logger.info("Custom Region: IP:{} " , getRemoteAddress());
-		//System.out.println("Custom");
-		
+
 		String title = " Birder’s Guide to Maryland & DC Hotspot Locations"; 	
 		List <MapPoints> pointList = new ArrayList<MapPoints>(); // pts on map
 		KmlParser kml = new KmlParser();
 		pointList = kml.parseKML();		
 
 		//int maxSize = coordinates.size();
-		
+
 		model.addAttribute("title", title);
 
 		model.addAttribute("lat", 39.5); // center of map 
@@ -738,7 +721,7 @@ public class BirdController {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//System.out.println("maxSize=" +maxSize);
+
 		List<ChecklistObservation> checklistList = new ArrayList<ChecklistObservation>();
 		ChecklistObservation checklist = new ChecklistObservation();
 
@@ -746,14 +729,14 @@ public class BirdController {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//	System.out.println("obj = "+ o);
+
 			try {
 				checklist = jsonObjectMapper.readValue(str, ChecklistObservation.class );
 			} catch (JsonProcessingException e) {
 				logger.error("");
-				model.addAttribute("error", "Coordinates  outside of US");
+				model.addAttribute("error", "Coordinates outside of US");
 				e.printStackTrace();
-				return "err";
+				return "error";
 
 			}
 
@@ -817,7 +800,7 @@ public class BirdController {
 			model.addAttribute("error", "FCC database problem or coordinates outside of US");
 			logger.error("FCC database problem or coordinates outside of US");
 			e.printStackTrace();
-			return "err";
+			return "error";
 		}
 
 		String placeName = service.getPlaceName(regionCode);
@@ -833,7 +816,7 @@ public class BirdController {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
+
 			try {
 				checklist = jsonObjectMapper.readValue(str, ChecklistObservation.class );
 			} catch (JsonProcessingException e) {
@@ -883,9 +866,7 @@ public class BirdController {
 	public String checklistRegion(Model model,
 			@RequestParam(value = "region", required = true) String regioncode) throws IOException {
 
-		logger.info("checklistRegion {} IP:{}", regioncode,  getRemoteAddress());
-
-		//System.out.println("checklistRegion region = "+ regioncode);
+		logger.info("checklistRegion {} IP:{}", regioncode,  getRemoteAddress());		
 
 		ObjectMapper jsonObjectMapper = new ObjectMapper();		
 		List <MapPoints> pointList = new ArrayList<MapPoints>(); // pts on map
@@ -900,7 +881,7 @@ public class BirdController {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//System.out.println("maxSize=" +maxSize);
+
 		List<ChecklistObservation> checklistList = new ArrayList<ChecklistObservation>();
 		ChecklistObservation checklist = new ChecklistObservation();
 
@@ -908,7 +889,7 @@ public class BirdController {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
+
 			try {
 				checklist = jsonObjectMapper.readValue(str, ChecklistObservation.class );
 			} catch (JsonProcessingException e) {
@@ -983,7 +964,7 @@ public class BirdController {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//	System.out.println("maxSize=" +maxSize);
+
 		List<ChecklistObservation> checklistList = new ArrayList<ChecklistObservation>();
 		ChecklistObservation checklist = new ChecklistObservation();
 
@@ -991,7 +972,7 @@ public class BirdController {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
+
 			try {
 				checklist = jsonObjectMapper.readValue(str, ChecklistObservation.class );
 			} catch (JsonProcessingException e) {
@@ -1107,7 +1088,6 @@ public class BirdController {
 
 		logger.info("species: placeName:{}" + placeName);
 
-
 		List <String> commonNameList = service.getSpeciesListRegion(regioncode);
 
 		model.addAttribute("map", map);
@@ -1143,21 +1123,13 @@ public class BirdController {
 
 		List<Name> nameList =  service.getBirdNamesData();
 
-		//	System.out.println("nameList size = '" + nameList.size() + "'");
-
 		ObjectMapper jsonObjectMapper = new ObjectMapper();			
 
 		String jString = service.callEbirdChecklistView(subId);	
 
-		//System.out.println("jString = '" + jString + "'");
-
 		JsonNode rootNode = jsonObjectMapper.readTree(jString);
 
 		//	jsonObjectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-
-
-		//System.out.println("rootNode = '" + rootNode + "'");		
-
 
 		CheckListIndv list = jsonObjectMapper.treeToValue(rootNode, CheckListIndv.class);
 
@@ -1185,7 +1157,6 @@ public class BirdController {
 			}						
 		}
 
-		//	System.out.println("list = '" + list + "'");
 
 		model.addAttribute("observation", list);
 		model.addAttribute("subId", subId);
@@ -1222,8 +1193,6 @@ public class BirdController {
 		int days = hotspot.getDays();
 		int dist = 10;
 
-//		System.out.println("region="+ region);
-		
 		// Probably better way to do this vs list
 		List <States> stateList = service.readStateData(); 
 
@@ -1291,9 +1260,6 @@ public class BirdController {
 		region = species.getRegion();			
 		int days = species.getDays();
 
-		//	System.out.println("region = '" + region + "'"); 
-		//System.out.println("code = '" + code + "'"); 
-
 		// todo get lat and lon based on region
 		List <States> states = null;
 
@@ -1349,6 +1315,127 @@ public class BirdController {
 
 
 	/**
+	 * TODO needs work
+	 * Display species for region. TODO
+	 * @param name
+	 * @param model
+	 * @return
+	 * @throws IOException 
+	 * @throws FileNotFoundException 
+	 */
+	@PostMapping("/showspecies2")
+	public String showSpecies2(Model model, HttpServletRequest request, 
+	@RequestParam(value = "lat", required = false) double lat,
+	@RequestParam(value = "lon", required = false) double lon,
+	@RequestParam(value = "commonname", required = true) String commonName)		
+			throws FileNotFoundException, IOException {
+		
+		logger.info("showspecies IP:{}",  getRemoteAddress());
+		
+		Species species = new Species();
+		
+		
+
+		String region = "";			
+		String regioncode= "";
+		
+		
+		try {
+			regioncode= service.getRegionCode(lat, lon);
+		} catch (Exception e) {
+			
+			model.addAttribute("error", "FCC database problem or coordinates  outside of US");
+			
+			logger.error("FCC database problem or coordinates outside of US");
+			e.printStackTrace();
+			
+			return "Error";
+			
+		}
+				
+		species.setSpeciesCode(service.getCodeName(commonName));
+		species.setComName(commonName);
+		species.setDays(7);
+		species.setRegion(regioncode);
+		
+
+		Map<String, String> map = service.getSpeciesListRegionMap(regioncode);
+
+		String placeName = service.getPlaceName(regioncode);
+
+		logger.info("species: placeName:{}" + placeName);
+
+		List <String> commonNameList = service.getSpeciesListRegion(regioncode);
+
+
+		String code= "";
+		
+
+		//get code from user form
+		code = service.getCodeName(species.getComName());       
+		
+		//code = subid;
+
+		// get region for user form.
+		region = species.getRegion();			
+		//int days = species.getDays();
+		int days = 7; // todo
+
+		// todo get lat and lon based on region
+		List <States> states = null;
+
+		try {
+			states = service.readStateData();
+		} catch (IOException e) {
+			model.addAttribute("error", "Problem reading state data");
+			e.printStackTrace();
+		}
+
+
+		// Probably better way to do this vs list
+		List <States> stateList = service.readStateData(); 
+
+	//	double lat = 39;
+	//	double lon  =-77;
+
+		for (States  element : stateList) {
+
+			String r = element.getCode();
+
+			if(r.contains(region)) {
+
+				lat = element.getLat();
+				lon  = element.getLon(); 
+			}
+
+		}
+
+		List <RegionSpecies> rs = service.getRecentSpeciesRegion(region, code, days);		
+		int size = rs.size();
+
+		
+		model.addAttribute("species", species);
+		model.addAttribute("code", code);
+
+		model.addAttribute("rs", rs);	 
+		model.addAttribute("size", size);	
+
+		model.addAttribute("regioncode", "Location: "+ region);	
+
+		model.addAttribute("lat", lat); // center of map TODO
+		model.addAttribute("lon", lon);		
+		model.addAttribute("mapsize", "width: 1000px; height: 800px;");
+		model.addAttribute("zoom", 7);
+		model.addAttribute("dist", 50);		// for links
+		model.addAttribute("back", days);	   // for links
+		model.addAttribute("days", days);	   // for links
+		model.addAttribute("speciesname", species.getComName());	
+
+		return "regionspecies";
+	}
+
+	
+	/**
 	 * Display rare species for region. 
 	 * @param name
 	 * @param model
@@ -1383,9 +1470,6 @@ public class BirdController {
 		if (back == 0) {
 			back = 1;
 		}
-
-		//	System.out.println("region = '" + region + "'"); 
-		//	System.out.println("code = '" + code + "'"); 
 
 		// get lat and lon based on state
 		List <States> states = null;
@@ -1423,7 +1507,6 @@ public class BirdController {
 			String comName1= element.getComName();
 			String subId = element.getSubId();
 
-			// System.out.println("notable: " + element.getSubId() + " " +element.getComName());
 			boolean flag = true;
 
 			// go through and see if it is already in the list
@@ -1494,8 +1577,7 @@ public class BirdController {
 
 		model.addAttribute("title", "ERROR PAGE");
 
-		return "err";
-
+		return "error";
 	}
 
 
@@ -1547,7 +1629,7 @@ public class BirdController {
 		model.addAttribute("title", "Custom Recent List");
 		model.addAttribute("test", "test location");			
 		model.addAttribute("prop", prop);
-		
+
 		return "menu/recent";
 
 	}
@@ -1563,12 +1645,11 @@ public class BirdController {
 	@GetMapping("/checklists/")
 	public String checklists(Model model) throws IOException { 
 		logger.info("checklists IP:{}",  getRemoteAddress());
-		
-		
+
 		List <LocationProp> prop = service.readLocationData();
 		model.addAttribute("title", "Custom Locations");					
 		model.addAttribute("prop", prop);		
-		
+
 		return "menu/checklists";
 
 	}
@@ -1588,11 +1669,11 @@ public class BirdController {
 		notable.setDays(7);
 
 		model.addAttribute("notable", notable);	
-		
+
 		List <LocationProp> prop = service.readLocationData();
 		model.addAttribute("title", "Notable Location List");					
 		model.addAttribute("prop", prop);		
-		
+
 		return "menu/notableform";
 
 	}
@@ -1612,15 +1693,14 @@ public class BirdController {
 		hotspot.setAdjacent(false);
 
 		List <States> stateList = service.readStateData(); 
-		List <String> stateCodeList =new ArrayList<String>(); ;
-		
-		
+		List <String> stateCodeList =new ArrayList<String>();
+
 		for (States  element : stateList) {
 			stateCodeList.add(element.getCode());
-		
+
 		}
-	    model.addAttribute("dropdownOptions", stateCodeList);		
-		
+		model.addAttribute("dropdownOptions", stateCodeList);		
+
 		List <LocationProp> prop = service.readLocationData();
 		model.addAttribute("title", "Custom Hotspot List");		
 		model.addAttribute("prop", prop);					
@@ -1629,16 +1709,20 @@ public class BirdController {
 		return "menu/hotspots";
 	}
 
-
+	/**
+	 * Custom form a user can fill out to find species in region.
+	 * @param model
+	 * @return 
+	 * @throws IOException
+	 */
 	@GetMapping("/regionspeciesform/")
 	public String recentregionspeciesform(Model model) throws IOException { 
 		logger.info("regionspeciesform IP:{}",  getRemoteAddress());
 		//	Name name = new Name();
 		Species species = new Species();
-		species.setDays(7);
-		species.setMaxResults(100);
+		species.setDays(7); // fixed for now
+		species.setMaxResults(100); // show 100
 		species.setAdjacent(false);
-
 		model.addAttribute("species", species);	
 
 		return "menu/regionspeciesform";
@@ -1656,32 +1740,32 @@ public class BirdController {
 	public List <String> lookup(@RequestParam(value = "term", required = false, defaultValue = "") String term) throws IOException { 
 
 		List <String> list2 = null; // new ArrayList<String>();
-		//System.out.println("lookup=" + term);		
-
+	
 		// get bird list of common names 
 		List <String> list = service.getBirdNamesStr();
 
 		if (list != null) {
-			//	System.out.println("size=" + list.size());
-
+			
 			list2  = findUsingStream(term, list);
-
-			//System.out.println("size2=" + list2.size());
-
+		
 			return list2;
 
 		}
 		else {
 			list = service.getBirdCommNames();
-			list2  = findUsingStream(term, list);
-			//System.out.println("size2 else =" + list2.size());
-
+			list2  = findUsingStream(term, list);	
 		}
 		return list2;
 	}
 
 
-	//TODO
+	
+	/**
+	 * //TODO
+	 * @param term
+	 * @return
+	 * @throws IOException
+	 */
 	@GetMapping("/lookupstate")
 	@ResponseBody
 	public List <String>  lookupstate(@RequestParam(value = "term", required = false, defaultValue = "") String term) throws IOException { 
@@ -1737,9 +1821,8 @@ public class BirdController {
 	@GetMapping("/")
 	public String index(Model model, HttpServletRequest request) throws IOException { 
 
-		 String userAgentStr = request.getHeader("User-Agent");
-		 System.out.println("userAgentStr =" + userAgentStr);
-		 
+		//String userAgentStr = request.getHeader("User-Agent");		
+
 		model.addAttribute("size", "width: 1000px; height: 800px;");		
 		model.addAttribute("lat", "39"); // center of map TODO
 		model.addAttribute("lon", "-95");		
@@ -1757,13 +1840,11 @@ public class BirdController {
 	 */
 	String getRemoteAddress(){
 
-
 		String ipAddress = request.getHeader("X-Forwarded-For");
 
-		if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
-
+		if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress))
+		{
 			ipAddress = request.getRemoteAddr();
-
 		}
 
 		return ipAddress;

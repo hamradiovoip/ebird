@@ -6,7 +6,7 @@ package dev.infomatik.ebird.entity;
 import java.util.Objects;
 
 /**
- * 
+ * Location properties, lat, lon, name etc
  */
 public class LocationProp {
 	

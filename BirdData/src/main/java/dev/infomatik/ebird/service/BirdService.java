@@ -1,7 +1,8 @@
 package dev.infomatik.ebird.service;
 /**
- * Gets data from  the eBird API.
+ * Gets data (JSON) from the eBird API.
  * https://documenter.getpostman.com/view/664302/S1ENwy59#intro
+ * eBird API 2.0
  * 
  */
 
@@ -67,35 +68,54 @@ public class BirdService {
 	private String apikey; 	
 
 	/** URLs */
+	/** 
+	 * Get the list of recent, notable observations (up to 30 days ago) of birds seen in a country, region or location.
+	 */
 	@Value("${url.recent}")
 	private String urlStrRecent;// = "https://api.ebird.org/v2/data/obs/geo/recent?";// lat={{lat}}&lng={{lng}}
-	
-	@Value("${url.hotspot}")
-	private String urlStrHotSpot;// = "https://api.ebird.org/v2/ref/hotspot/geo?"; //lat={{lat}}&lng={{lng}}	
 
+	/** 
+	 * Get information on the location of a hotspot.
+	 */
+	@Value("${url.hotspot}")
+	private String urlStrHotSpot;// = "https://api.ebird.org/v2/ref/hotspot/geo?"; //lat={{lat}}&lng={{lng}}
+	
+	/**
+	 * Get the list of recent, notable observations (up to 30 days ago) of birds seen in a country, region or location.
+	 * Notable observations can be for locally or nationally 
+	 * rare species or are otherwise unusual, e.g. over-wintering birds in a species which is normally only a summer visitor.
+	 */
 	@Value("${url.notable}")
 	private String urlStrNotable; // = "https://api.ebird.org/v2/data/obs/"; 
-
+	
+	/** main url */
 	@Value("${url.ebird}")
 	private String ebirdUrl; // = "https://api.ebird.org/"; 
-	 
-	/** for headers */
+
+	/** for adding api to the header */
 	@Value("${api.header}")
 	private String header; //: {{x-ebirdapitoken}}'
 
-	
-	
-	
 
 	/** testing */
 	//private String allDataFilename = "/home/thorn/Documents/workspace-spring-tool-suite-4-4.23.1.RELEASE/BirdData/src/main/resources/data/ebird.json";
-	/** map for search bird common names */
+	
+	/** Save bird name data used for searching common name etc. */
 	Map<String,String> birdNameMap = new HashMap<>();
+	
+	/** Save bird name data used for searching common name etc. */
 	Map<String,String> reverseBirdNameMap = new HashMap<>();
 
+	/** List of bird names.  */
 	private List <Name> birdNames;
+	
+	/** List of bird names, String.  */
 	private List <String> birdNamesStr;
+	
+	/** List for states */
 	List <States> states;
+	
+	/**  Location properties, lat, lon, name etc */
 	List <LocationProp> locationProps;
 
 
@@ -129,9 +149,11 @@ public class BirdService {
 
 
 	/**
+	 * Get coords of the center of sata/region.
 	 * TODO nice to have other countries
-	 * @param region
-	 * @return Coords of center region/state
+	 * 
+	 * @param stateCode (ie MD, NY)
+	 * @return Coords of center of region/state
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -158,15 +180,14 @@ public class BirdService {
 		Coords coords = new Coords(lat, lon);
 
 		return coords;
-
 	}
 
 
 	/**
 	 * Recent notable observations in a region.  Get the list of recent, notable observations (up to 30 days ago)
 	 * of birds seen in a country, region or location.
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 */
 	public String callEbirdNotableRegion(String region, int back) {
@@ -192,17 +213,18 @@ public class BirdService {
 	 * of birds seen at locations within a radius of up to 50 kilometers, from a given set of coordinates.
 	 * Notable observations can be for locally or nationally rare species or are otherwise unusual, for example 
 	 * over-wintering birds in a species which is normally only a summer visitor.
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param back
+	 * 
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return
 	 */
 	public String callEbirdNotable(double lat, double lon, double dist, int back) {
-		
+
 		String url = urlStrNotable + "geo/recent/notable?lat="+
 				lat + "&lng=" + lon + "&detail=full&" + "dist=" + dist + "&back="  + back;
-		
+
 		String  resp = callExternalApi(url);
 
 		//System.out.println(resp);
@@ -214,8 +236,10 @@ public class BirdService {
 	/**
 	 * Get the list of recent observations (up to 30 days ago) of birds seen at locations within a radius of up to 50 kilometers,
 	 * from a given set of coordinates. Results include only the most recent observation for each species in the region specified.
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+ 	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return
 	 */
 	public String callEbirdRecent(double lat, double lon, double dist, int back) {
@@ -236,8 +260,10 @@ public class BirdService {
 	/**
 	 * Get the list of hotspots, within region.
 	 * https://api.ebird.org/v2/ref/hotspot/{{regionCode}}
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+ 	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return
 	 */
 	public String callEbirdHotSpotRegion(String region, double dist, int back) {
@@ -254,8 +280,10 @@ public class BirdService {
 
 	/**
 	 * Get the list of hotspots, within a radius of up to 50 kilometers, from a given set of coordinates.
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+ 	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return
 	 */
 	public String callEbirdHotSpot(double lat, double lon, double dist, int back) {
@@ -263,9 +291,7 @@ public class BirdService {
 		String url = urlStrHotSpot +  "lat="+lat + "&lng="+lon + "&dist=" + dist + "&back=" + back +
 				"&fmt=json";//   {{lng}}		
 
-		String  resp = callExternalApi(url);
-
-		//	System.out.println(resp);
+		String  resp = callExternalApi(url);	
 
 		return (resp);
 
@@ -274,8 +300,8 @@ public class BirdService {
 	/**
 	 * Get checklist without coords for map, just a list
 	 * https://api.ebird.org/v2/product/checklist/view/{{subId}}
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 */
 	public String callEbirdChecklistDate(String regionCode, String year, String month, String day, String max) {
@@ -285,8 +311,6 @@ public class BirdService {
 
 		String resp = callExternalApi(url);
 
-		//System.out.println("response: "+ resp);	
-
 		return (resp);
 	}
 
@@ -295,8 +319,8 @@ public class BirdService {
 	/**
 	 * Get checklist without coords for map, just a list
 	 * https://api.ebird.org/v2/product/checklist/view/{{subId}}
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 */
 	public String callEbirdChecklist(String subId) {
@@ -304,9 +328,6 @@ public class BirdService {
 		String subIdUrl = ebirdUrl + "v2/product/lists/" + subId +"?maxResults=100"; //{{subId}}
 
 		String  resp =	callExternalApi(subIdUrl);
-
-		//	System.out.println("response: "+ resp);	
-
 
 		return (resp);
 	}
@@ -323,9 +344,6 @@ public class BirdService {
 
 		String  resp =	callExternalApi(subIdUrl);
 
-		//	System.out.println("response: "+ resp);	
-
-
 		return (resp);
 	}
 
@@ -333,8 +351,8 @@ public class BirdService {
 	/**
 	 * Recent observations of a species in a region
 	 * https://api.ebird.org/v2/data/obs/{{regionCode}}/recent/{{speciesCode}}
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 */
 	public String callEbirdRecentSpecies(String region, String species, int days) {
@@ -350,58 +368,17 @@ public class BirdService {
 		}
 		String subIdUrl =  ebirdUrl + "v2/data/obs/"+ region +"/recent/" + species + "?back=" + back;
 
-		//	System.out.println("subIdUrl: "+ subIdUrl);	
-
 		String resp = callExternalApi(subIdUrl);
-
-
-		//System.out.println("resp: "+ resp);	
-
-		//	System.out.println("response: "+ resp);	
-
-
-		/*
-		[
-		  {
-		    "speciesCode": "cangoo",
-		    "comName": "Canada Goose",
-		    "sciName": "Branta canadensis",
-		    "locId": "L1150539",
-		    "locName": "Hanshaw Rd. fields",
-		    "obsDt": "2017-08-23 20:05",
-		    "howMany": 30,
-		    "lat": 42.4663513,
-		    "lng": -76.4531064,
-		    "obsValid": true,
-		    "obsReviewed": false,
-		    "locationPrivate": false
-		  },
-		  {
-		    "speciesCode": "cangoo",
-		    "comName": "Canada Goose",
-		    "sciName": "Branta canadensis",
-		    "locId": "L6208778",
-		    "locName": "169 Locust Ln, Richfield US-NY (42.8366,-75.0028)",
-		    "obsDt": "2017-08-23 19:45",
-		    "howMany": 13,
-		    "lat": 42.83663,
-		    "lng": -75.002794,
-		    "obsValid": true,
-		    "obsReviewed": false,
-		    "locationPrivate": true
-		  }
-		]
-
-		 */
 
 		return (resp);
 	}
+	
 
 	/**
 	 * Get a list of species codes ever seen in a region, in taxonomic order (species taxa only)
 	 * https://api.ebird.org/v2/product/spplist/{{regionCode}}
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 */
 	public String callEbirdSpecies(String region) {
@@ -424,22 +401,18 @@ public class BirdService {
 	@PostMapping
 	@ResponseBody
 	public String callExternalApi(@RequestBody String url) {
-
-		//System.out.println("Calling ebird api: " + new java.util.Date());
-
-		logger.info("Calling ebird api {}", url);
 		
-		// System.out.print(url);
+		logger.info("Calling ebird api {} header = {} ", url, header);
+		
 		HttpHeaders headers = new HttpHeaders();
-		
+
 		// need this for maps to work without 403 issues
 		// Tile Usage Policy
 		// https://wiki.openstreetmap.org/wiki/Referer
-		
-        headers.set("Referrer-Policy", "same-origin");
-        headers.set("User-Agent", "CustomApp/1.0");	
-		
-		
+
+		headers.set("Referrer-Policy", "same-origin");
+		headers.set("User-Agent", "CustomApp/1.0");	
+
 		headers.add(header, apikey);
 		HttpEntity<Object> entity = new HttpEntity<Object>(headers);
 
@@ -454,8 +427,8 @@ public class BirdService {
 	 * Get the list of countries or regions that share a border with this one.
 	 * https://api.ebird.org/v2/ref/adjacent/{{regionCode}}
 	 *  
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @param regionString
 	 * @return
 	 */
@@ -477,7 +450,7 @@ public class BirdService {
 				regionCode = getStateCode(lat, lon); //get state code from FCC DB
 
 			} catch (Exception e) {
-
+				logger.error("Problem with : https://api.ebird.org/v2/ref/adjacent/ {} {} {}", regionCode, lat, lon);
 				e.printStackTrace();
 			}
 
@@ -503,6 +476,8 @@ public class BirdService {
 				region = jsonObjectMapper.readValue(str, Region.class);				
 
 			} catch (JsonProcessingException e) {
+				
+				logger.error("Problem with jsonObjectMapper  {} {}",  lat, lon);
 				e.printStackTrace();
 				//throw e;
 			}
@@ -582,10 +557,10 @@ public class BirdService {
 	 * https://api.ebird.org/v2/data/nearest/geo/recent/{{speciesCode}}?lat={{lat}}&lng={{lng}}
 	 * speciesCode	The eBird species code.
 	 * @param speciesCode
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param back
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return List of species
 	 * @throws JsonProcessingException 
 	 */
@@ -593,22 +568,16 @@ public class BirdService {
 
 		String url = ebirdUrl + "v2/data/nearest/geo/recent/"+ speciesCode +
 				"?lat=" +lat + "&lng=" +lon + "&dist=" + dist + "&back=" + back + "&maxResults=250";
-
-		//System.out.println("url = "+ url);	
-
+		
 		String jString =  callExternalApi(url);
-
-		//	System.out.println("json = "+ jString);				
-
+			
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 
 		int maxSize = jsonArray.length();
-		//System.out.println("jsonArray = "+ jsonArray);	
-
+		
 		String jsonStr = jString.substring(1, jString.length() - 1); // strip off [] on the ends
 
-		//	System.out.println("jsonStr = "+ jsonStr);	
-
+		
 		ObjectMapper jsonObjectMapper = new ObjectMapper();		
 		List <MapPoints> pointList = new ArrayList<MapPoints>(); // pts on map
 		List <Nearby> nearbyList = new ArrayList<Nearby>();
@@ -629,7 +598,6 @@ public class BirdService {
 				throw e;
 			}
 
-			//String commonName = getCommonName(SpeciesCodeName);		
 
 			nearbyList.add(nearby);	
 		}
@@ -676,8 +644,6 @@ public class BirdService {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//System.out.println("maxSize=" + maxSize);		
-		//System.out.println("jString species list = '" + jString + "'");
 
 		List <String> commonNameList =  new ArrayList<String>();
 
@@ -687,8 +653,6 @@ public class BirdService {
 
 			Object o = jsonArray.get(i);
 			String SpeciesCodeName = o.toString();
-
-			//	String SpeciesCodeName = obs.get(i).getSpeciesCode();
 
 			// lookup and add			TODO
 
@@ -714,8 +678,6 @@ public class BirdService {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//System.out.println("maxSize=" + maxSize);		
-		//System.out.println("jString species list = '" + jString + "'");
 
 		List <String> commonNameList =  new ArrayList<String>();
 
@@ -752,8 +714,6 @@ public class BirdService {
 
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 		int maxSize = jsonArray.length();
-		//System.out.println("maxSize=" + maxSize);		
-		//	System.out.println("jString species list = '" + jString + "'");
 
 		List <String> commonNameList =  new ArrayList<String>();
 
@@ -789,10 +749,10 @@ public class BirdService {
 	 * each species in the region specified.
 	 * 
 	 * https://api.ebird.org/v2/data/obs/{{regionCode}}/recent/notable?detail=full
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param back
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return List<Recent>  a list of Recent objects to be displayed.
 	 * @throws Exception 
 	 */
@@ -802,9 +762,6 @@ public class BirdService {
 		List <MapPoints> pointList = new ArrayList<MapPoints>(); // pts on map
 
 		NotableList notableLists = new NotableList();
-
-		//	String region = getRegionCode(lat, lon);
-		//	System.out.println("region = "+ region);	
 
 		String jString = callEbirdNotableRegion(region, back);	
 
@@ -857,10 +814,10 @@ public class BirdService {
 	 * 
 	 * https://api.ebird.org/v2/data/obs/geo/recent/notable?lat={{lat}}&lng={{lng}}
 	 * 
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param back days
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return List<Recent>  a list of Recent objects to be displayed.
 	 * @throws Exception 
 	 */
@@ -881,7 +838,7 @@ public class BirdService {
 
 			throw e;
 		}
-		//	System.out.println("region = "+ region);	
+		
 		JSONArray jsonArray = new org.json.JSONArray(jString);
 
 		int maxSize = jsonArray.length();
@@ -894,9 +851,7 @@ public class BirdService {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//	System.out.println(i+" obj = "+ str);	
-
-
+			
 			try {
 				notable = jsonObjectMapper.readValue(str, Notable.class);			
 
@@ -931,10 +886,10 @@ public class BirdService {
 	 * Get the list of recent observations (up to 30 days ago) of birds seen in a country,
 	 * state, county, or location. Results include only the most recent observation for 
 	 * each species in the region specified.
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param back
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return List<Recent>  a list of Recent objects to be displayed.
 	 */
 	public List<Recent> getRecent(double lat, double lon, double dist, int back) {
@@ -998,7 +953,6 @@ public class BirdService {
 	}
 
 
-
 	/**
 	 * Get a summary of the number of checklist submitted, species seen and contributors on a given date for a country or region.
 	 * TODO, not sure if useful
@@ -1023,8 +977,8 @@ public class BirdService {
 	 * USA only for now.
 	 * TODO outside USA; town lookup?
 	 * Given latitude & longitude, extract and return eBird "regionCode" from FCC database
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 * @throws Exception 
 	 */
@@ -1047,17 +1001,12 @@ public class BirdService {
 		}
 
 		JsonNode jn2 = jn.get("results");	
-		//System.out.println("results jn2 = "+ jn2);	
-
+		
 		JsonNode rootNode = jsonObjectMapper.readTree(jn2.toString());
 
 		String str = rootNode.toString();
 
-		//System.out.println("rootNode = "+ rootNode);	
-
 		String jsonStr = str.substring(1, str.length() - 1);
-
-		//	System.out.println("jsonStr = "+ jsonStr);
 
 		JsonNode rootNode2 = jsonObjectMapper.readTree(jsonStr);
 		try {
@@ -1074,15 +1023,11 @@ public class BirdService {
 
 
 		//CountySub county = differentResult.getCountySub();
-
 		//String countyFips = county.getCOUNTY();
-
-
 		//	String countyFips = differentResult.getCountyFips();
 		//	String subnationalType2 = countyFips.substring(countyFips.length() - 3); // subnational type 2 last 3 used
 
 		regionCode =  "US-"+ state;// + "-" + subnationalType2;
-
 
 		return regionCode;
 
@@ -1093,8 +1038,8 @@ public class BirdService {
 	 * USA only for now.
 	 * TODO outside USA; town lookup?
 	 * Given latitude & longitude, extract and return eBird "regionCode" from FCC database
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 * @throws Exception 
 	 */
@@ -1116,17 +1061,12 @@ public class BirdService {
 		}
 
 		JsonNode jn2 = jn.get("results");	
-		//System.out.println("results jn2 = "+ jn2);	
-
+		
 		JsonNode rootNode = jsonObjectMapper.readTree(jn2.toString());
 
 		String str = rootNode.toString();
 
-		//	System.out.println("rootNode = "+ rootNode);	
-
 		String jsonStr = str.substring(1, str.length() - 1);
-
-		//System.out.println("jsonStr = "+ jsonStr);
 
 		JsonNode rootNode2 = jsonObjectMapper.readTree(jsonStr);
 		try {
@@ -1138,9 +1078,6 @@ public class BirdService {
 		}
 		//fcc version
 		String regionCode = "";
-
-		//	String countyFips = differentResult.getCountyFips();
-		//	String subnationalType2 = countyFips.substring(countyFips.length() - 3); // subnational type 2 last 3 used
 
 		regionCode =  "US-"+ differentResult.getStateCode();// + "-" + subnationalType2;
 
@@ -1154,16 +1091,14 @@ public class BirdService {
 	 * USA only for now.
 	 * TODO outside USA; town lookup?
 	 * Given latitude & longitude, extract and return eBird "regionCode" from FCC database
-	 * @param lat 
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return region code.
 	 * @throws Exception 
 	 */
 	private String getRegionCodeCensus(double lat, double lon) throws Exception {
 
 		String  sUrl = "https://geocoding.geo.census.gov/geocoder/geographies/coordinates?x="+lon+"&y="+lat +"&benchmark=4&vintage=4&format=json";
-
-		//System.out.println("sUrl = "+ sUrl);	
 
 		URL url = new URL(sUrl);
 		dev.infomatik.ebird.entity.regioncode.States stateResult = null;
@@ -1181,17 +1116,11 @@ public class BirdService {
 			throw e;
 		}
 
-		JsonNode jn2 = jn.get("result");	
-
-		//System.out.println("result jn2 = "+ jn2);	
+		JsonNode jn2 = jn.get("result");			
 
 		JsonNode geographies = jn2.get("geographies");			
 		JsonNode jState = geographies.get("States");	
 		JsonNode jCounty = geographies.get("County Subdivisions");	
-
-		//		System.out.println("result geographies = "+ geographies +"\n\n");
-		//		System.out.println("result county = "+ jCounty);
-		//		System.out.println("result state = "+ jState);
 
 		String strState = jState.toString();
 		String strCounty = jCounty.toString();		
@@ -1202,10 +1131,6 @@ public class BirdService {
 
 		JsonNode rootNodeState = jsonObjectMapper.readTree(jsonStrState);		
 		JsonNode rootNodeCounty = jsonObjectMapper.readTree(jsonStrCounty);			
-
-		//	System.out.println("jsonStrState = "+ jsonStrState);
-		//	System.out.println("jsonStrCounty = "+ jsonStrCounty);
-
 
 		try {
 			countyResults = jsonObjectMapper.treeToValue(rootNodeCounty,  dev.infomatik.ebird.entity.regioncode.CountySub.class);
@@ -1220,10 +1145,7 @@ public class BirdService {
 		String subnationalType2 = countyResults.getCounty();
 		String stateStr = stateResult.getStusab();
 
-
 		regionCode =  "US-"+ stateStr + "-" + subnationalType2;
-
-		//System.out.println("regionCode = "+ regionCode);		
 
 		return regionCode;
 
@@ -1235,16 +1157,14 @@ public class BirdService {
 	 * USA only for now.
 	 * TODO outside USA; town lookup?
 	 * Given latitude & longitude, extract and return eBird "regionCode" from FCC database
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 * @throws Exception 
 	 */
 	private String getRegionCodeFCC(double lat, double lon) throws Exception {
 
 		String  sUrl = "https://geo.fcc.gov/api/census/area?lat=" +lat + "&lon=" +lon + "&format=json";
-
-		//System.out.println("sUrl = "+ sUrl);	
 
 		URL url = new URL(sUrl);
 		Result differentResult = null;
@@ -1260,18 +1180,12 @@ public class BirdService {
 		}
 
 		JsonNode jn2 = jn.get("results");	
-		//System.out.println("results jn2 = "+ jn2);	
-
-
+		
 		JsonNode rootNode = jsonObjectMapper.readTree(jn2.toString());
 
 		String str = rootNode.toString();
 
-		//System.out.println("rootNode = "+ rootNode);	
-
 		String jsonStr = str.substring(1, str.length() - 1);
-
-		//System.out.println("jsonStr = "+ jsonStr);
 
 		JsonNode rootNode2 = jsonObjectMapper.readTree(jsonStr);
 		try {
@@ -1293,8 +1207,8 @@ public class BirdService {
 
 	/**
 	 * Generic
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 * @throws Exception
 	 */
@@ -1305,8 +1219,6 @@ public class BirdService {
 		//Try census first
 		try {
 			regionCode = getRegionCodeCensus(lat, lon);
-			//	System.out.println("regionCode="+ regionCode);
-
 		}
 		catch(Exception e) {
 			System.out.println("Problem with Census call to get region info, try FCC next.");
@@ -1326,8 +1238,8 @@ public class BirdService {
 
 	/**
 	 * Generic
-	 * @param lat
-	 * @param lon
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
 	 * @return
 	 * @throws Exception
 	 */
@@ -1359,10 +1271,10 @@ public class BirdService {
 
 	/**
 	 * Get the list of hotspots, within region.
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param days
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return list of HotSpots
 	 */
 	public List <HotSpot> getHotSpotsRegion(String region, double dist, int days) {
@@ -1379,7 +1291,7 @@ public class BirdService {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
+			
 			try {
 				hotspot = jsonObjectMapper.readValue(str, HotSpot.class );
 			} catch (JsonProcessingException e) {
@@ -1400,10 +1312,10 @@ public class BirdService {
 
 	/**
 	 * Get the list of hotspots, within a radius of up to 50 kilometers, from a given set of coordinates.
-	 * @param lat
-	 * @param lon
-	 * @param dist
-	 * @param days
+	 * @param lat Latitude to 2 decimal places.
+	 * @param lon Longitude to 2 decimal places.
+	 * @param dist Distance or the search radius from the given position, in kilometers.
+	 * @param back The number of days back to fetch observations.
 	 * @return list of HotSpots
 	 */
 	public List <HotSpot> getHotSpots(double lat, double lon, double dist, int days) {
@@ -1420,7 +1332,7 @@ public class BirdService {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
+			
 			try {
 				hotspot = jsonObjectMapper.readValue(str, HotSpot.class );
 			} catch (JsonProcessingException e) {
@@ -1459,7 +1371,7 @@ public class BirdService {
 			}
 			return json.toString();
 		} catch (IOException e) {
-			//			System.out.println("stream/read problem");	
+			
 			logger.error("stream/read problem");		
 			e.printStackTrace();
 		}
@@ -1496,7 +1408,7 @@ public class BirdService {
 
 					throw e1;
 				}
-				//System.out.println("Error? with url '" + url +  "' read problem: " + i);	
+				
 				continue; // go again
 			}
 			break;
@@ -1518,8 +1430,7 @@ public class BirdService {
 		//	Map<String,String> map = new HashMap<>();
 		int maxSize = names.size();
 
-		//System.out.println("maxSize="+maxSize);
-		//String data = "";
+
 		for(int i = 0; i < maxSize; i++){
 
 			Name n = names.get(i);
@@ -1561,8 +1472,6 @@ public class BirdService {
 		//	Map<String,String> map = new HashMap<>();
 		int maxSize = names.size();
 
-		//System.out.println("maxSize="+maxSize);
-		//String data = "";
 		for(int i = 0; i < maxSize; i++){
 
 			Name n = names.get(i);
@@ -1676,8 +1585,6 @@ public class BirdService {
 
 		int maxSize = jsonArray.length();
 
-		//System.out.println("maxSize=" +maxSize);		
-
 		List<Name> nameList = new ArrayList<Name>();
 		birdNamesStr = new ArrayList<String>();
 
@@ -1688,8 +1595,7 @@ public class BirdService {
 
 			Object o = jsonArray.get(i);
 			String str = o.toString();
-			//System.out.println("obj = "+ o);
-
+			
 			try {
 				name = jsonObjectMapper.readValue(str, Name.class );
 			} catch (JsonProcessingException e) {
@@ -1817,8 +1723,6 @@ public class BirdService {
 		return locationProps;		
 
 	}
-
-
 
 } // end class
 
