@@ -62,7 +62,8 @@ public class BirdService {
 	protected static final Logger logger = LogManager.getLogger(); // TODO
 
 	@Value("${api.key}")
-	/** APi key needed to access the ebird api, put it in the app.prop file*/
+	/** APi key needed to access the ebird api, put it in the application.prop file.
+	 * Get it here: https://ebird.org/api/keygen */
 	private String apikey; 	
 
 	/** URLs */
@@ -407,15 +408,15 @@ public class BirdService {
 
 		String subIdUrl = ebirdUrl + "v2/product/spplist/" + region; //{{subId}}
 
-		String  resp =	callExternalApi(subIdUrl);
+		String resp = callExternalApi(subIdUrl);
 
-		//System.out.println("response: "+ resp);	
+		System.out.println("response: "+ resp);	
 
 		return (resp);
 	}
 
 	/**
-	 * Call ebird query using apikey as header.
+	 * Call ebird query using apikey and "Referrer-Policy" in header.
 	 * @param url
 	 * @return String response body.
 	 */
@@ -426,11 +427,19 @@ public class BirdService {
 
 		//System.out.println("Calling ebird api: " + new java.util.Date());
 
-		logger.info("Calling ebird api {}",url );
+		logger.info("Calling ebird api {}", url);
 		
-		System.out.print(url);
+		// System.out.print(url);
 		HttpHeaders headers = new HttpHeaders();
-
+		
+		// need this for maps to work without 403 issues
+		// Tile Usage Policy
+		// https://wiki.openstreetmap.org/wiki/Referer
+		
+        headers.set("Referrer-Policy", "same-origin");
+        headers.set("User-Agent", "CustomApp/1.0");	
+		
+		
 		headers.add(header, apikey);
 		HttpEntity<Object> entity = new HttpEntity<Object>(headers);
 
@@ -1785,10 +1794,8 @@ public class BirdService {
 				String[] values = line.split(COMMA_DELIMITER );
 
 				LocationProp locationProp = new LocationProp();
-				//Tuscon, AZ, 32.2769, -110.7472,  50, 7
+				//Tuscon AZ, 32.2769, -110.7472,  50, 7
 
-
-				System.out.println(values[0]);
 
 				locationProp.setLocName(values[0]);				
 				locationProp.setLatitude(Double.parseDouble(values[1]));

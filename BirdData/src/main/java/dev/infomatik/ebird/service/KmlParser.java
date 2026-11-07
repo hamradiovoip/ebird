@@ -99,7 +99,7 @@ public class KmlParser
 	}
 
 	/**
-	 * Print out
+	 * Print out for debugging
 	 * @param coordinate
 	 */
 

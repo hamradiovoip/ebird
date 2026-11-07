@@ -5,40 +5,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex, nofollow" />
-	
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.ico}" />
 	<title>Region Specices Obs Form</title>
 
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<!-- Pulls in all CSS assets from the layout file  -->
+	<th:block th:replace="~{fragments/layout-fragments :: leaflet-assets}"></th:block>
+	<th:block th:replace="~{fragments/styles :: map-styles}"></th:block>
+	<th:block th:replace="~{fragments/bootstrap :: bootstrap-assets}"></th:block>
 
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<th:block th:replace="~{fragments/jquery :: jquery-assets}"></th:block>
 
-	<style>
-		html,
-		body {
-			height: 100%;
-			margin: 0;
-		}
-
-		.leaflet-container {
-			height: 400px;
-			width: 600px;
-			max-width: 100%;
-			max-height: 100%;
-		}
-
-		.my-label {
-			position: absolute;
-			width: 100px;
-			font-size: 20px;
-		}
-	</style>
 
 	<script type="text/javascript">
 		$(function () {
@@ -77,7 +54,7 @@
 	<div th:replace="~{fragments/navbar}"></div>
 	<p>
 		Sample observations<br>
-		<a href="/recentregionspecies?lat=39.4798135%20&lon=-77.6325412&region=US-MD&species=scatan">  Scarlet Tanager Observations</a>
+		<a href="/recentregionspecies?lat=39.4798135%20&lon=-77.6325412&region=US-MD&species=scatan"> Scarlet Tanager Observations</a>
 	<P>
 
 		<a href="/recentregionspecies?lat=39.4798135%20&lon=-77.6325412&region=US-MD&species=camwar"> Cape May Warbler Observations </a>
@@ -101,37 +78,37 @@
 			</div>
 			<input id="Bird_Name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="birdName" th:field="*{comName}" />
 		</div>
-		
-		
+
+
 		<div class=" input-group input-group-sm mb-3">
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="bird">Days</span>
 			</div>
 			<input id="days" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" th:field="*{days}" />
 		</div>
-		
-		
+
+
 		<div class=" input-group input-group-sm mb-3">
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="bird">Max</span>
 			</div>
 			<input id="max" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="max" th:field="*{maxResults}" />
 		</div>
-		
-		
-		
+
+
+
 		<div class=" input-group input-group-sm mb-3">
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="bird">Adjacent Regions (TODO)</span>
 			</div>
-		
-		    <input id="adjacent" type="checkbox" th:checked="*{adjacent}"/> 
-		
+
+			<input id="adjacent" type="checkbox" th:checked="*{adjacent}" />
+
 		</div>
 
 		<button name=" submit" type="submit" value="0">Submit</button>
 
-<!--		<input id="Bird_Id" type="hidden" name="speciesCode" th:field="*{speciesCode}" />
+		<!--		<input id="Bird_Id" type="hidden" name="speciesCode" th:field="*{speciesCode}" />
 		<input id="Region_Id" type="hidden" name="region" th:field="*{region}" />-->
 
 	</form>

@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -1221,7 +1222,7 @@ public class BirdController {
 		int days = hotspot.getDays();
 		int dist = 10;
 
-		System.out.println("region="+ region);
+//		System.out.println("region="+ region);
 		
 		// Probably better way to do this vs list
 		List <States> stateList = service.readStateData(); 
@@ -1565,10 +1566,8 @@ public class BirdController {
 		
 		
 		List <LocationProp> prop = service.readLocationData();
-		model.addAttribute("title", "Custom Checklist Locations");
-		model.addAttribute("test", "test location");			
-		model.addAttribute("prop", prop);
-		
+		model.addAttribute("title", "Custom Locations");					
+		model.addAttribute("prop", prop);		
 		
 		return "menu/checklists";
 
@@ -1738,6 +1737,9 @@ public class BirdController {
 	@GetMapping("/")
 	public String index(Model model, HttpServletRequest request) throws IOException { 
 
+		 String userAgentStr = request.getHeader("User-Agent");
+		 System.out.println("userAgentStr =" + userAgentStr);
+		 
 		model.addAttribute("size", "width: 1000px; height: 800px;");		
 		model.addAttribute("lat", "39"); // center of map TODO
 		model.addAttribute("lon", "-95");		
