@@ -315,7 +315,6 @@ public class BirdService {
 	}
 
 
-
 	/**
 	 * Get checklist without coords for map, just a list
 	 * https://api.ebird.org/v2/product/checklist/view/{{subId}}
